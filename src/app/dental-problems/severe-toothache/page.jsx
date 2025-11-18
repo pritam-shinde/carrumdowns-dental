@@ -1,6 +1,5 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
 import BannerSevereToothache from "../../../../public/carrum-new/banner/severe-toothache.jpg";
 import ToothDecay from "../../../../public/dental-problems-img/severe toothache/Gum_disaese_01.png";
@@ -9,18 +8,20 @@ import severeTootache1 from '../../../../public/dental-problems-img/severe tooth
 import severeTootache2 from '../../../../public/dental-problems-img/severe toothache/Severe_Toothache_02.png';
 import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 
+export const metadata = {
+    title: "Learn About Severe Toothaches | Carrum Down Dental",
+    description: "A common issue is severe toothache. Usually, tooth damage or decay is to blame. Carrum Downs Dental can provide further information.",
+    robots: "index",
+    alternates: { canonical: "/dental-problems/severe-toothache/", },
+};
+
 const SevereToothache = () => {
     const breadcrumb = [
         { id: "dental_problem_breadcrumb_1", link: "/dental-problems/", title: "Dental Problems" },
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/severe-toothache", title: 'Severe Toothaches' }
-      ] 
+    ]
     return (
         <>
-            <Head>
-                <title>Learn About Severe Toothaches | Carrum Down Dental</title>
-                <meta name="description" content="A common issue is severe toothache. Usually, tooth damage or decay is to blame. Carrum Downs Dental can provide further information." />
-                <meta name="robots" content="index" />
-            </Head>
             <CommonHero
                 bg={BannerSevereToothache}
                 breadcrumb={breadcrumb}

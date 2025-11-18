@@ -1,8 +1,6 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import BiteProblemsBanner from "../../../../public/carrum-new/banner/bite-problem.jpg";
 import BiteProblems1 from "../../../../public/dental-problems-img/bite problems/Bite_problems_02.png";
 import BiteProblems2 from "../../../../public/dental-problems-img/bite problems/Bite_problems_03.png";
@@ -10,6 +8,14 @@ import ClearAligners from "../../../../public/dental-problems-img/bite problems/
 import SmileMakeover from "../../../../public/dental-problems-img/bite problems/Smile_makeovers.png";
 import ToothExtraction from "../../../../public/dental-problems-img/bite problems/Tooth_Extraction_01.png";
 import Wisdom from "../../../../public/dental-problems-img/bite problems/Wisdom_Teeth_Removal_01.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+  title: "Dealing with Bite Problems | Carrum Downs Dental",
+  description: "Carrum Downs Dental Can Help With Bite Problems. Learn the causes of biting problems and look at practical solutions to guarantee a comfortable bite for a happier smile.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/bite-problems/", },
+};
 
 const WisdomToothPain = () => {
     const breadcrumb = [
@@ -17,12 +23,7 @@ const WisdomToothPain = () => {
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/bite-problems", title: 'Bite Problems' }
       ] 
     return (
-        <>
-            <Head>
-                <title>Dealing with Bite Problems | Carrum Downs Dental</title>
-                <meta name="description" content="Carrum Downs Dental Can Help With Bite Problems. Learn the causes of biting problems and look at practical solutions to guarantee a comfortable bite for a happier smile." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={BiteProblemsBanner}
                 breadcrumb={breadcrumb}

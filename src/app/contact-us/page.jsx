@@ -1,13 +1,18 @@
 import { Box, Button, Container, Grid, Paper } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
-import {
-  CommonHero,
-  CommonSidebar,
-  SectionalHeading,
-} from "../../components/components";
+import { CommonHero, CommonSidebar, SectionalHeading, } from "../../components/components";
 import Banner from "../../../public/carrum-new/banner/contact-us.jpg";
 import Clinic from "../../../public/contact/clinic.jpeg";
+
+export const metadata = {
+  title: "Contact Dentist in and around Carrum Downs | Walk in @Carrum Downs Clinic",
+  description:
+    "Don’t suffer from a dental problem! Get your dental problem treated by Carrum Downs Dental Group. We’re available at Carrum Downs and nearby localities.",
+  robots: "index, follow",
+  alternates: { canonical: "/contact-us", },
+};
+
 
 const Contact = () => {
   const breacrumb = [
@@ -16,17 +21,6 @@ const Contact = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Contact Dentist in and around Carrum Downs | Walk in @Carrum Downs
-          Clinic
-        </title>
-        <meta
-          name="description"
-          content="Don’t suffer from a dental problem! Get your dental problem treated by Carrum Downs Dental Group. We’re available at Carrum Downs and nearby localities."
-        />
-        <meta name="robots" content="index" />
-      </Head>
       <CommonHero
         bg={Banner}
         breadcrumb={breacrumb}
@@ -136,7 +130,7 @@ const Contact = () => {
                       </Grid>
                       <Grid item xs={12} md={6}>
                         <Box>
-                          <Image src={Clinic} alt="carrumdowns clinic" width={750} height={670}/>
+                          <Image src={Clinic} alt="carrumdowns clinic" width={750} height={670} />
                         </Box>
                       </Grid>
                     </Grid>

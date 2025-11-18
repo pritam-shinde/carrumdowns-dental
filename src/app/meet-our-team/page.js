@@ -1,6 +1,4 @@
 import { Box, Card, CardContent, CardMedia, Container, Grid, Typography, } from "@mui/material";
-import Head from "next/head"; 
-import { CommonHero } from "../../components/components";
 import Chanrith from "../../../public/meet-our-team/Chanrith.jpeg";
 import Ash from "../../../public/meet-our-team/dr-ash.jpg";
 import Chandni from "../../../public/meet-our-team/dr-chandni.jpg";
@@ -17,24 +15,22 @@ import Raman from "../../../public/meet-our-team/raman-practice-co-ordinator.jpg
 import Rashi from "../../../public/meet-our-team/rashi-receptionists.jpg";
 import Riddhi from "../../../public/meet-our-team/riddhi-receptionists.jpg";
 import Samira from "../../../public/meet-our-team/samira-da-carrum.jpg";
+import { CommonHero } from "../../components/components";
+
+export const metadata = {
+  title: "Meet Our Team – Carrum Downs Dental Group",
+  description: "Meet the friendly team at Carrum Downs Dental Group. Skilled dentists ready to care for your smile with expert care.",
+  robots: "index",
+  alternates: { canonical: "/meet-our-team/", },
+};
 
 const MeetOurTeam = () => {
-   
-
   const breadcrumb = [
     { id: "new_technology_breadcrumb_1", link: null, title: "Meet Our Team" },
   ];
 
   return (
-    <>
-      <Head>
-        <title>Meet Our Team – Carrum Downs Dental Group</title>
-        <meta
-          name="description"
-          content="Meet the friendly team at Carrum Downs Dental Group. Skilled dentists ready to care for your smile with expert care."
-        />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero
         bg={Banner}
         breadcrumb={breadcrumb}

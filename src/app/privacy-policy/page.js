@@ -1,33 +1,23 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, } from "@mui/material";
-import Head from "next/head";
-import { CommonHero, SectionalHeading } from "../../components/components";
 import Banner from "../../../public/carrum-new/banner/privacy.jpg";
+import { CommonHero, SectionalHeading } from "../../components/components";
+
+export const metadata = {
+  title: "Privacy Policy | Carrum Downs Dental Group",
+  description: "Read our Privacy Policy carefully. You agree to accept the practices and terms described in this policy while you browse or visit or using the services.",
+  robots: "index",
+  alternates: { canonical: "/privacy-policy/", },
+};
 
 const PrivacyPolicy = () => {
-
-
   const breadcrumb = [
     { id: "privacy_policy_breadcrumb_1", link: null, title: "Privacy Policy" },
   ];
 
   return (
     <>
-      <Head>
-        <title>Privacy Policy | Carrum Downs Dental Group</title>
-        <meta
-          name="description"
-          content="Read our Privacy Policy carefully. You agree to accept the practices and terms described in this policy while you browse or visit or using the services."
-        />
-        <meta name="robots" content="no-index" />
-      </Head>
-      <CommonHero
-        bg={Banner}
-        breadcrumb={breadcrumb}
-        title="Privacy Policy"
-        color="#fff"
-        align="left"
-      />
+      <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Privacy Policy" color="#fff" align="left" />
       <main>
         <Container maxWidth="xxl">
           <Grid container>

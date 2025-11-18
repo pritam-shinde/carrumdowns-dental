@@ -1,25 +1,23 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import Head from 'next/head'
 import Image from 'next/image'
-import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components'
 import Banner from '../../../public/suburb/bg.jpg'
 import SeafordClinic from '../../../public/suburb/seaford/Seaford.jpg'
+import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components'
+
+export const metadata = {
+  title: "Find the Best Dentist in Seaford | Carrum Downs Dental Group",
+  description: "Carrum Downs Dental Group is now available for people living in and around Seaford. All the dental service you expect and more are now available in Seaford.",
+  robots: "index",
+  alternates: { canonical: "/dentist-in-seaford/", },
+};
 
 const SeaFord = () => {
-  
-
   const breadcrumb = [
     { id: "seaford_breadcrumb_1", link: null, title: "Dentist In Seaford" }
   ]
 
   return (
-    <>
-
-      <Head>
-        <title>Find the Best Dentist in Seaford | Carrum Downs Dental Group</title>
-        <meta name="description" content="Carrum Downs Dental Group is now available for people living in and around Seaford. All the dental service you expect and more are now available in Seaford." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero breadcrumb={breadcrumb} bg={Banner} title="Dentist In Seaford" align="left" color="#fff" />
      <main>
           <Container maxWidth="xxl">

@@ -1,9 +1,15 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
 import Banner from "../../../public/suburb/bg.jpg";
 import CranbourneWestClinic from "../../../public/suburb/cranbourne-west/cranbourne-west.jpg";
 import { CommonHero, CommonSidebar, SectionalHeading, } from "../../components/components";
+
+export const metadata = {
+  title: "Dentist in Cranbourne West | Carrum Downs Dental Group",
+  description: "Carrum Downs Dental Group is now available for people living in and around Cranbourne West. All the dental service you expect and more are now available in Cranbourne West.",
+  robots: "index",
+  alternates: { canonical: "/dentist-in-cranbourne-west/", },
+};
 
 const CranbourneWest = () => {
   const breadcrumb = [
@@ -15,15 +21,7 @@ const CranbourneWest = () => {
   ];
 
   return (
-    <>
-      <Head>
-        <title>Dentist in Cranbourne West | Carrum Downs Dental Group</title>
-        <meta
-          name="description"
-          content="Carrum Downs Dental Group is now available for people living in and around Cranbourne West. All the dental service you expect and more are now available in Cranbourne West."
-        />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero
         bg={Banner}
         breadcrumb={breadcrumb}

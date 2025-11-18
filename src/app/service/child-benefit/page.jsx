@@ -1,10 +1,16 @@
 import { CheckCircleOutline, RadioButtonUncheckedOutlined, } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
-import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from "../../../components/components";
 import Banner from "../../../../public/carrum-new/banner/child-benefit.webp";
 import ChildBenefitTreatment from "../../../../public/child-benefit/child-benefit-compressed.jpg";
+import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from "../../../components/components";
+
+export const metadata = {
+  title: "Children Dentist Carrum Downs | Child Dental Benefits Scheme",
+  description: "CDBS schedule allows child dental services for the kids between 2-17 years. Children dentists in Carrum Downs carry out the dental treatment very gently.",
+  robots: "index",
+  alternates: { canonical: "/service/child-benefit", },
+};
 
 const ChildBenefit = () => {
   const breadcrumb = [
@@ -13,17 +19,7 @@ const ChildBenefit = () => {
   ];
 
   return (
-    <>
-      <Head>
-        <title>
-          Children Dentist Carrum Downs | Child Dental Benefits Scheme
-        </title>
-        <meta
-          name="description"
-          content="CDBS schedule allows child dental services for the kids between 2-17 years. Children dentists in Carrum Downs carry out the dental treatment very gently."
-        />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero
         bg={Banner}
         breadcrumb={breadcrumb}

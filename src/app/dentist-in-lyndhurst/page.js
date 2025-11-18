@@ -1,9 +1,15 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components';
 import Banner from '../../../public/suburb/bg.jpg';
 import LyndhurstClinic from '../../../public/suburb/Lyndhurst/lyndhurst.jpg';
+import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components';
+
+export const metadata = {
+  title: "Experienced Dentist in Lyndhurst | Carrum Downs Dental Group",
+  description: "Carrum Downs Dental Group is now available for people living in and around Lyndhurst. All the dental service you expect and more are now available in Lyndhurst.",
+  robots: "index",
+  alternates: { canonical: "/dentist-in-lyndhurst/", },
+};
 
 const Lyndhurst = () => {
   const breadcrumb = [
@@ -11,12 +17,7 @@ const Lyndhurst = () => {
   ]
 
   return (
-    <>
-      <Head>
-        <title>Experienced Dentist in Lyndhurst | Carrum Downs Dental Group</title>
-        <meta name="description" content="Carrum Downs Dental Group is now available for people living in and around Lyndhurst. All the dental service you expect and more are now available in Lyndhurst." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Dentist In Lyndhurst" align="left" color="#fff" />
       <main>
         <Container maxWidth="xxl">

@@ -3,9 +3,14 @@ import Head from 'next/head';
 import Banner from '../../../public/carrum-new/banner/new-technologies.webp';
 import { CommonHero } from '../../components/components';
 
+export const metadata = {
+  title: "New Dental Technologies – Carrum Downs Dental Group",
+  description: "Our dental clinic has introduced new technologies to help enhance our practice and patient education. Explore the technologies",
+  robots: "index",
+  alternates: { canonical: "/new-technologies/", },
+};
+
 const NewTechnology = () => {
-
-
   const breadcrumb = [
     { id: "new_technology_breadcrumb_1", link: null, title: "New Technologies" }
   ]
@@ -53,13 +58,11 @@ const NewTechnology = () => {
                 <Box className='mt-md-4 mt-4'>
                   <Typography variant='h2' className='sectional-heading5 mb-2'><strong>3Shape 3D Scanner</strong></Typography>
                   <Typography className='para'>Say goodbye to messy impressions! Our state-of-the-art 3Shape 3D Scanner allows us to take fast, accurate digital impressions of your teeth in just minutes. This improves comfort for our patients and enhances precision for treatments such as crowns, bridges, implants, and clear aligners. The scanner captures detailed 3D images of your mouth, helping us plan your treatment with greater accuracy and efficiency.</Typography>
-                </Box>
-                {/*  */}
+                </Box> 
                 <Box className='mt-md-4 mt-4'>
                   <Typography variant='h2' className='sectional-heading5 mb-2'><strong>Laser Dentistry</strong></Typography>
                   <Typography className='para'>We use the latest dental laser technology to deliver gentle, precise, and minimally invasive care. Laser dentistry is ideal for procedures like gum contouring, ulcer treatment, soft tissue removal, and managing gum disease. It reduces the need for sutures, minimises bleeding and swelling, and often leads to quicker healing and a more comfortable experience for patients.</Typography>
-                </Box>
-                {/*  */}
+                </Box> 
                 <Box className='mt-md-4 mt-4'>
                   <Typography variant='h2' className='sectional-heading5 mb-2'><strong>CBCT 3D X-ray Imaging</strong></Typography>
                   <Typography className='para'>Our advanced Cone Beam Computed Tomography (CBCT) 3D X-ray system provides detailed, three-dimensional images of your teeth, jaw, and surrounding structures. This technology is crucial for accurate diagnosis and treatment planning in complex cases such as implants, wisdom teeth removal, root canals, and orthodontics. CBCT scans offer a full 3D view with lower radiation and greater precision than traditional X-rays.</Typography>

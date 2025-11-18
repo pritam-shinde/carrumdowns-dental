@@ -1,6 +1,5 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
 import BannerTeethSensitivity from "../../../../public/carrum-new/banner/sensitivity.jpg";
 import Treatment from "../../../../public/dental-problems-img/teeth sensitivity/Bite_problems_03.png";
@@ -10,18 +9,20 @@ import teethSensitivity1 from '../../../../public/dental-problems-img/teeth sens
 import teethSensitivity2 from '../../../../public/dental-problems-img/teeth sensitivity/teeth_sensitivity_02.png';
 import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 
+export const metadata = {
+    title: "Carrum Down Dental: Teeth Sensitivity: What You Need to Know",
+    description: "Taking care of sensitive teeth Do you have a sensitive tooth in particular? At Carrum Downs Dental, we provide a variety of treatments. Visit right now.",
+    robots: "index",
+    alternates: { canonical: "/dental-problems/teeth-sensitivity/", },
+};
+
 const teethSensitivity = () => {
     const breadcrumb = [
         { id: "dental_problem_breadcrumb_1", link: "/dental-problems/", title: "Dental Problems" },
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/teeth-sensitivity", title: 'Teeth Sensitivity' }
     ]
     return (
-        <>
-            <Head>
-                <title>Carrum Down Dental: Teeth Sensitivity: What You Need to Know</title>
-                <meta name="description" content="Taking care of sensitive teeth Do you have a sensitive tooth in particular? At Carrum Downs Dental, we provide a variety of treatments. Visit right now." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={BannerTeethSensitivity}
                 breadcrumb={breadcrumb}

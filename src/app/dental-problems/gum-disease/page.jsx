@@ -1,8 +1,6 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import BannerGumDisease from "../../../../public/carrum-new/banner/gum-disease.jpg";
 import gumDisease1 from '../../../../public/dental-problems-img/gum disease/Gum_Disease_01.png';
 import gumDisease2 from '../../../../public/dental-problems-img/gum disease/Gum_Disease_02.png';
@@ -10,19 +8,22 @@ import GumDisease from "../../../../public/dental-problems-img/gum disease/Gum_D
 import Scaling from "../../../../public/dental-problems-img/gum disease/Scaling_and_Cleaning.png";
 import Tooth_Extraction from "../../../../public/dental-problems-img/gum disease/Tooth_Extraction_01.png";
 import Wisdom from "../../../../public/dental-problems-img/gum disease/Wisdom_Teeth_Removal.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+    title: "A Guide to Understanding Gum Disease | Carrum Down Dental",
+    description: "Gum disease is an infection of the gums rather than the teeth. Gum disease might start long before you have any symptoms or signs. Contact Carrum Downs Dental for more.",
+    robots: "index",
+    alternates: { canonical: "/dental-problems/gum-disease/", },
+};
 
 const GumDiseases = () => {
     const breadcrumb = [
         { id: "dental_problem_breadcrumb_1", link: "/dental-problems/", title: "Dental Problems" },
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/gum-disease", title: 'Gum Disease' }
-      ] 
+    ]
     return (
         <>
-            <Head>
-                <title>A Guide to Understanding Gum Disease | Carrum Down Dental</title>
-                <meta name="description" content="Gum disease is an infection of the gums rather than the teeth. Gum disease might start long before you have any symptoms or signs. Contact Carrum Downs Dental for more." />
-                <meta name="robots" content="index" />
-            </Head>
             <CommonHero
                 bg={BannerGumDisease}
                 breadcrumb={breadcrumb}

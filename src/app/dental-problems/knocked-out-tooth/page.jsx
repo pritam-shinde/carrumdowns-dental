@@ -1,8 +1,6 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import BannerKnockedOutTeeth from "../../../../public/carrum-new/banner/knocked-out-tooth.jpg";
 import DentalImplants1 from "../../../../public/dental-problems-img/knocked out tooth/Dental_implants1.png";
 import Dentures from "../../../../public/dental-problems-img/knocked out tooth/Dentures.png";
@@ -10,19 +8,22 @@ import knockedoutTooth1 from '../../../../public/dental-problems-img/knocked out
 import knockedoutTooth2 from '../../../../public/dental-problems-img/knocked out tooth/Knocked_Out_Tooth_02.png';
 import RootCanal from "../../../../public/dental-problems-img/knocked out tooth/Root_canal_treatment.png";
 import bridges from "../../../../public/teeth-missing/teeth-missing-dental-bridges.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+    title: "A Treatment Guide for Knocked-Out Teeth | Carrum Down Dental",
+    description: "Discover the ultimate treatment guide for knocked-out teeth at Carrum Down Dental. Our expert dentists provide complete solutions to help you restore your smile.",
+    robots: "index",
+    alternates: { canonical: "/dental-problems/knocked-out-tooth/", },
+};
 
 const KnockedOutTeeth = () => {
     const breadcrumb = [
         { id: "dental_problem_breadcrumb_1", link: "/dental-problems/", title: "Dental Problems" },
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/knocked-out-tooth", title: 'Knocked Out Teeth' }
-      ] 
+    ]
     return (
         <>
-            <Head>
-                <title>A Treatment Guide for Knocked-Out Teeth | Carrum Down Dental</title>
-                <meta name="description" content="Discover the ultimate treatment guide for knocked-out teeth at Carrum Down Dental. Our expert dentists provide complete solutions to help you restore your smile." />
-                <meta name="robots" content="index" />
-            </Head>
             <CommonHero
                 bg={BannerKnockedOutTeeth}
                 breadcrumb={breadcrumb}

@@ -1,32 +1,24 @@
 import { CalendarMonth, CheckCircleOutlineOutlined, MobileFriendly, QrCode, SentimentSatisfiedAlt, } from "@mui/icons-material";
 import { Box, Button, Card, CardContent, CardMedia, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, } from "@mui/material";
-import Head from "next/head";
-import { CommonHero, SectionalHeading } from "../../components/components";
 import Banner from "../../../public/carrum-new/banner/offer.webp";
 import Offer249 from "../../../public/Offer/Image-249.jpg";
 import Offer2 from "../../../public/Offer/kids-offer.jpg";
 import Offer1 from "../../../public/Offer/scale-clean-offer.jpg";
 import Offer3 from "../../../public/Offer/teeth-whitening-offer.jpg";
+import { CommonHero, SectionalHeading } from "../../components/components";
+
+export const metadata = {
+  title: "Get Special Dental Offers at Carrum Downs Dental",
+  description: "Take advantage of our special offers for affordable dental care at Carrum Downs Dental. Book your appointment today!",
+  robots: "index",
+  alternates: { canonical: "/offer/", },
+};
 
 const Offer = () => {
   const breadcrumb = [{ id: "Offer_breadcrumb_1", link: null, title: "Offer" }];
   return (
     <>
-      <Head>
-        <title>Get Special Dental Offers at Carrum Downs Dental</title>
-        <meta
-          name="description"
-          content="Take advantage of our special offers for affordable dental care at Carrum Downs Dental. Book your appointment today!"
-        />
-        <meta name="robots" content="index" />
-      </Head>
-      <CommonHero
-        breadcrumb={breadcrumb}
-        color="#fff"
-        align="left"
-        bg={Banner}
-        title="Offer"
-      />
+      <CommonHero breadcrumb={breadcrumb} color="#fff" align="left" bg={Banner} title="Offer" />
       <main>
         <Container maxWidth="xxl">
           <Grid container>

@@ -1,6 +1,5 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
 import BannerToothGap from "../../../../public/carrum-new/banner/gap-in-teeth.jpg";
 import ClearAligners from "../../../../public/dental-problems-img/tooth gaps/Clear_aligners.png";
@@ -11,18 +10,20 @@ import toothGaps2 from "../../../../public/dental-problems-img/tooth gaps/Tooth_
 import toothGaps1 from "../../../../public/dental-problems-img/tooth gaps/Tooth_gaps-02.png";
 import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from "../../../components/components";
 
+export const metadata = {
+  title: "Say Goodbye to Teeth Gaps | Carrum Down Dental",
+  description: "Say Goodbye to Teeth Gaps with Carrum Downs Dental. Explore our effective solutions to close the gaps in your smile and achieve a more confident and healthy set of teeth.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/tooth-gap/", },
+};
+
 const ToothGap = () => {
     const breadcrumb = [
         { id: "dental_problem_breadcrumb_1", link: "/dental-problems/", title: "Dental Problems" },
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/tooth-gap", title: 'Tooth Gap' }
       ] 
     return (
-        <>
-            <Head>
-                <title>Say Goodbye to Teeth Gaps | Carrum Down Dental</title>
-                <meta name="description" content="Say Goodbye to Teeth Gaps with Carrum Downs Dental. Explore our effective solutions to close the gaps in your smile and achieve a more confident and healthy set of teeth." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero bg={BannerToothGap} breadcrumb={breadcrumb} title="Tooth Gaps" align="left" color="#ccc" />
             <section
                 className=""

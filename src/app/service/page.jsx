@@ -1,6 +1,4 @@
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
-import Head from "next/head";
-import { CommonHero } from "../../components/components";
 import childBenefit from "../../../public/Services/child-benefit-01.png";
 import CnB from "../../../public/Services/crowns-and-bridge-01.png";
 import dentalImplant from "../../../public/Services/dental-implants-01.png";
@@ -20,16 +18,18 @@ import teethCleaning from "../../../public/Services/teeth-cleaning-01.png";
 import teethWhitening from "../../../public/Services/teeth-whitening-01.png";
 import veneers from "../../../public/Services/veneers-01.png";
 import Wisdom from "../../../public/Services/wisdom-teeth-removal-01.png";
-import Image from "next/image";
+import { CommonHero } from "../../components/components";
+
+export const metadata = {
+  title: "Dental Health Services for a Healthy, Beautiful Smile",
+  description: "Explore advanced dental health services in Carrum Downs, Victoria. Expert care for a healthy smile, offering a range of treatments for all your dental needs.",
+  robots: "index",
+  alternates: { canonical: "/service/", },
+};
 
 const Service = () => {
   return (
-    <>
-      <Head>
-        <title>Dental Health Services for a Healthy, Beautiful Smile</title>
-        <meta name="description" content="Explore advanced dental health services in Carrum Downs, Victoria. Expert care for a healthy smile, offering a range of treatments for all your dental needs." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={null} title="Advanced Dental Health Services" align="left" color="#fff" />
       <main>
         <section>

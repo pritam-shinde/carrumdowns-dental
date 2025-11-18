@@ -1,20 +1,19 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Banner from "../../../../public/carrum-new/banner/dental-implant.webp";
 import After from "../../../../public/Dental-Implant/Implant-after.jpg";
 import Before from "../../../../public/Dental-Implant/Implant-before.jpg";
 import MySmilePlan from "../../../../public/Dental-Implant/mysmileplan.png";
-import {
-    BookAndCall,
-    CommonHero,
-    CommonSidebar,
-    InterestFree,
-    SectionalHeading,
-    TermsNCondition,
-} from "../../../components/components";
+import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition, } from "../../../components/components";
+
+export const metadata = {
+  title: "Expert Dental Implants Services with Expert Care",
+  description: "Dental Implants are an effective way to deal with tooth loss. Our dental implants are made from Titanium. Call us today for your dental implants treatment.",
+  robots: "index",
+  alternates: { canonical: "/service/dental-implants", },
+};
 
 const DentalImplants = () => {
     const breadcrumb = [
@@ -26,15 +25,7 @@ const DentalImplants = () => {
         },
     ];
     return (
-        <>
-            <Head>
-                <title>Expert Dental Implants Services with Expert Care</title>
-                <meta
-                    name="description"
-                    content="Dental Implants are an effective way to deal with tooth loss. Our dental implants are made from Titanium. Call us today for your dental implants treatment."
-                />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={Banner}
                 breadcrumb={breadcrumb}
@@ -149,7 +140,7 @@ const DentalImplants = () => {
                                                         <SectionalHeading
                                                             variant="h2"
                                                             title="Choose Carrum Downs Dental at Shop T5, 100 Hall Road for all your Dental Implant requirements."
-                                                           align ='left'
+                                                            align='left'
                                                             color="var(--dark-blue)"
                                                         />
                                                     </Box>
@@ -196,7 +187,7 @@ const DentalImplants = () => {
                                                             <SectionalHeading
                                                                 variant="h2"
                                                                 title="Benefits of Dental Implant"
-                                                               align ='left'
+                                                                align='left'
                                                                 color="var(--dark-blue)"
                                                             />
                                                         </Box>
@@ -259,7 +250,7 @@ const DentalImplants = () => {
                                                         <SectionalHeading
                                                             variant="h2"
                                                             title="How does the Dental Implant procedure work in Carrum Downs Dental Group at Shop T5, 100 Hall Rd."
-                                                           align ='left'
+                                                            align='left'
                                                             color="var(--dark-blue)"
                                                         />
                                                     </Box>
@@ -267,7 +258,7 @@ const DentalImplants = () => {
                                                         <SectionalHeading
                                                             variant="h3"
                                                             title="Dental Implant procedure follows the below steps"
-                                                           align ='left'
+                                                            align='left'
                                                             color="var(--dark-blue)"
                                                         />
                                                         <Box>

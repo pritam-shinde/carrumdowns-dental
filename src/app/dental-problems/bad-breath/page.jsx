@@ -1,9 +1,7 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from "../../../components/components";
-import BannerBadBreath from "../../../../public/carrum-new/banner/bad-breath.jpg"; 
+import BannerBadBreath from "../../../../public/carrum-new/banner/bad-breath.jpg";
 import DentalFilling from "../../../../public/dental-problems-img/bad breath/Dental_filling.png";
 import ScaleAndCleaning from "../../../../public/dental-problems-img/bad breath/Scaling_and_Cleaning.png";
 import ToothExtraction from "../../../../public/dental-problems-img/bad breath/Tooth_Extraction.png";
@@ -11,6 +9,14 @@ import Wisdom from "../../../../public/dental-problems-img/bad breath/Wisdom_Tee
 import BadBreath1 from "../../../../public/dental-problems-img/bad breath/bad_breath_01.png";
 import BadBreath2 from "../../../../public/dental-problems-img/bad breath/bad_breath_02.png";
 import Treatment from "../../../../public/dental-problems-img/bad breath/bad_breath_06.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from "../../../components/components";
+
+export const metadata = {
+  title: "Find Remedies for Your Bad Breath | Carrum Downs Dental",
+  description: "Banish Bad Breath with Solutions from Carrum Downs Dental. Learn about the causes of bad breath & discover effective remedies to regain your confidence & fresh breath.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/bad-breath/", },
+};
 
 const BadBreath = () => {
     const breadcrumb = [
@@ -26,15 +32,7 @@ const BadBreath = () => {
         },
     ];
     return (
-        <>
-            <Head>
-                <title>Find Remedies for Your Bad Breath | Carrum Downs Dental</title>
-                <meta
-                    name="description"
-                    content="Banish Bad Breath with Solutions from Carrum Downs Dental. Learn about the causes of bad breath & discover effective remedies to regain your confidence & fresh breath."
-                />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero bg={BannerBadBreath} breadcrumb={breadcrumb} title="Bad Breath" align="left" color="#fff" />
 
             <section

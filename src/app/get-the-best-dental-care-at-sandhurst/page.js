@@ -1,9 +1,15 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
-import { CommonHero, CommonSidebar } from "../../components/components";
 import Banner from "../../../public/suburb/bg.jpg";
 import SandhurstClinic from "../../../public/suburb/sandhurst/sandhurst.jpg";
+import { CommonHero, CommonSidebar } from "../../components/components";
+
+export const metadata = {
+  title: "Dental Care at Sandhurst | Carrum Downs Dental Group",
+  description: "Skilled & experienced dentists in Sandhurst that provide best quality dental services. Carrum We provides superior dental treatment at an affordable price.",
+  robots: "index",
+  alternates: { canonical: "/get-the-best-dental-care-at-sandhurst/", },
+};
 
 const Sandhurst = () => {
   const breadcrumb = [
@@ -16,14 +22,6 @@ const Sandhurst = () => {
 
   return (
     <>
-      <Head>
-        <title>Dental Care at Sandhurst | Carrum Downs Dental Group</title>
-        <meta
-          name="description"
-          content="Skilled & experienced dentists in Sandhurst that provide best quality dental services. Carrum We provides superior dental treatment at an affordable price."
-        />
-        <meta name="robots" content="index" />
-      </Head>
       <CommonHero
         bg={Banner}
         breadcrumb={breadcrumb}
@@ -40,7 +38,7 @@ const Sandhurst = () => {
                   <Grid item xs={12} lg={8}>
                     <section>
                       <Container maxWidth="xxl">
-                        <Image  className='img-fluid'
+                        <Image className='img-fluid'
                           src={SandhurstClinic}
                           alt="Dentist In Sandhurst"
                         />

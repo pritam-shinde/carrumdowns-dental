@@ -1,25 +1,25 @@
 import { CheckCircleOutline } from '@mui/icons-material'
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
-import Head from 'next/head'
 import Link from 'next/link'
 import Script from 'next/script'
-import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from '../../../components/components'
 import Banner from '../../../../public/carrum-new/banner/teeth-emergency-bg.jpg'
+import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from '../../../components/components'
+
+export const metadata = {
+  title: "Emergency Dentist in and around Carrum Downs & other Suburbs",
+  description: "Need urgent dental care in Carrum Downs? Our expert emergency dentists provide fast, reliable treatment to relieve pain and handle dental emergencies.",
+  robots: "index",
+  alternates: { canonical: "/service/dental-emergency", },
+};
 
 const DentalEmergency = () => {
-
   const breadcrumb = [
     { id: "DentalEmergency_breadcrumb_1", link: "/service/", title: "Service" },
     { id: "DentalEmergency_breadcrumb_2", link: null, title: 'Dental Emergency in Carrum Downs' }
   ]
 
   return (
-    <>
-      <Head>
-        <title>Emergency Dentist in and around Carrum Downs & other Suburbs</title>
-        <meta name="description" content="Need urgent dental care in Carrum Downs? Our expert emergency dentists provide fast, reliable treatment to relieve pain and handle dental emergencies." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Emergency Dental Care for Fast, Trusted Relief" align="left" color="#fff" />
       <>
         <main>

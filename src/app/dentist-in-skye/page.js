@@ -1,9 +1,15 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import Head from 'next/head'
 import Image from 'next/image'
-import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components'
 import Banner from '../../../public/suburb/bg.jpg'
 import SkyeClinic from '../../../public/suburb/skye/skye.jpg'
+import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components'
+
+export const metadata = {
+    title: "Experienced Dentist in Skye | Carrum Downs Dental Group",
+    description: "Our dentists in skye offer quality dental care to the patients. Our experienced dentists can meet all your oral care needs. Contact us today!",
+    robots: "index",
+    alternates: { canonical: "/dentist-in-skye/", },
+};
 
 const Skye = () => {
     const breadcrumb = [
@@ -12,11 +18,6 @@ const Skye = () => {
 
     return (
         <>
-            <Head>
-                <title>Experienced Dentist in Skye | Carrum Downs Dental Group</title>
-                <meta name="description" content="Our dentists in skye offer quality dental care to the patients. Our experienced dentists can meet all your oral care needs. Contact us today!" />
-                <meta name="robots" content="index" />
-            </Head>
             <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Dentist In Skye" align="left" color="#fff" />
             <main>
                 <Container maxWidth="xxl">
@@ -27,7 +28,7 @@ const Skye = () => {
                                     <Grid item xs={12} lg={8}>
                                         <section>
                                             <Container maxWidth="xxl">
-                                                <Image src={SkyeClinic} alt="Dentist In Skye" className='img-fluid'/>
+                                                <Image src={SkyeClinic} alt="Dentist In Skye" className='img-fluid' />
                                                 <Box mt={2}>
                                                     <SectionalHeading variant="h2" title="Get Painless Dental Treatment at Skye" align="left" color="var(--dark-blue)" />
                                                     <Typography className='para mt-2'>At Carrum Downs Dental, just the moment, you step on our doors; our lovely staff will greet and welcome you with a warm smile. They will help you answer any question you might have and will go above and beyond to serve your needs.</Typography>

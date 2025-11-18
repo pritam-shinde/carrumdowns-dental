@@ -1,19 +1,18 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
-import {
-    BookAndCall,
-    CommonHero,
-    CommonSidebar,
-    InterestFree,
-    SectionalHeading,
-    TermsNCondition,
-} from "../../../components/components";
 import Banner from "../../../../public/carrum-new/banner/digital-dectures-bg.jpg";
 import image1 from "../../../../public/digital-denture/digital-denture-1.jpg";
 import image2 from "../../../../public/digital-denture/digital-denture-2.jpg";
 import image3 from "../../../../public/digital-denture/digital-denture-3.jpg";
+import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition, } from "../../../components/components";
+
+export const metadata = {
+    title: "High-Quality Digital Denture Repairs for a Secure Fit",
+    description: "Professional digital denture repairs in Carrum Downs. Quality service and fast turnaround for all your denture needs. Book your repair today!",
+    robots: "index",
+    alternates: { canonical: "/service/digital-dentures", },
+};
 
 const DigitalDentures = () => {
     const breadcrumb = [
@@ -27,14 +26,6 @@ const DigitalDentures = () => {
 
     return (
         <>
-            <Head>
-                <title>High-Quality Digital Denture Repairs for a Secure Fit</title>
-                <meta
-                    name="description"
-                    content="Professional digital denture repairs in Carrum Downs. Quality service and fast turnaround for all your denture needs. Book your repair today!"
-                />
-                <meta name="robots" content="index" />
-            </Head>
             <CommonHero
                 bg={Banner}
                 breadcrumb={breadcrumb}

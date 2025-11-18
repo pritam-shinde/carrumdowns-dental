@@ -9,7 +9,6 @@ import Banner from '../../../../public/carrum-new/banner/root-canal-bg.jpg'
 import RootCanalDia from '../../../../public/RootCanal/root-canal.jpg'
 
 const RootCanal = () => {
-
   const breadcrumb = [
     { id: "RootCanal_breadcrumb_1", link: "/service/", title: "Service" },
     { id: "RootCanal_breadcrumb_2", link: null, title: 'Root Canal in Carrum Downs' }

@@ -1,24 +1,22 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import Head from 'next/head'
 import Image from 'next/image'
-import { CommonHero, CommonSidebar } from '../../components/components'
 import Banner from '../../../public/suburb/bg.jpg'
 import FrankstonNorthClinic from '../../../public/suburb/frankston-north/frankston-North.jpg'
+import { CommonHero, CommonSidebar } from '../../components/components'
+
+export const metadata = {
+  title: "Dentist in Frankston North | Carrum Downs Dental Group",
+  description: "Carrum Downs Dental Group is now available for people living in and around Frankston North. All the dental service you expect and more are now available in Frankston North.",
+  robots: "index",
+  alternates: { canonical: "/looking-for-a-dentist-in-frankston-north/", },
+};
 
 const FrankstonNorth = () => {
-
-
   const breadcrumb = [
     { id: "frankson_north_breadcrumb_1", link: null, title: "Looking for a dentist in Frankston North?" }
   ]
-
   return (
-    <>
-      <Head>
-        <title>Dentist in Frankston North | Carrum Downs Dental Group</title>
-        <meta name="description" content="Carrum Downs Dental Group is now available for people living in and around Frankston North. All the dental service you expect and more are now available in Frankston North." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Looking for a dentist in Frankston North?" align="left" color="#fff" />
       <Container maxWidth="xxl">
         <Grid container>

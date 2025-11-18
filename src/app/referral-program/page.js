@@ -1,10 +1,16 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import Head from 'next/head'
 import Image from 'next/image'
-import { CommonHero, TermsNCondition } from '../../components/components'
 import Banner from '../../../public/carrum-new/banner/referral-program.webp'
 import PRF1 from '../../../public/patient-referral-program/prp-1.jpg'
 import PRF2 from '../../../public/patient-referral-program/prp-2.jpg'
+import { CommonHero, TermsNCondition } from '../../components/components'
+
+export const metadata = {
+  title: "Patient Referral Program By Carrum Downs Dental Group",
+  description: "A referral is the greatest compliment we can receive from our patients. Get $25 credit towards your next dental visit. Check out our referral program in detail.",
+  robots: "index",
+  alternates: { canonical: "/referral-program/", },
+};
 
 const ReferralProgram = () => {
   const breadcrumb = [
@@ -12,12 +18,7 @@ const ReferralProgram = () => {
   ]
 
   return (
-    <>
-      <Head>
-        <title>Patient Referral Program By Carrum Downs Dental Group</title>
-        <meta name="description" content="A referral is the greatest compliment we can receive from our patients. Get $25 credit towards your next dental visit. Check out our referral program in detail." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={breadcrumb} align="left" color="#fff" title="Referral Program" />
       <main>
         <section>

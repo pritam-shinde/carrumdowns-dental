@@ -1,18 +1,18 @@
-import { Box, Container } from '@mui/material'
-import Head from 'next/head'
-import Image from 'next/image'
-import BlueFilledBtn from "../../components/custom-buttons/BlueFilledBtn/BlueFilledBtn"
+import { Box, Container } from '@mui/material';
+import Image from 'next/image';
+import BlueFilledBtn from "../../components/custom-buttons/BlueFilledBtn/BlueFilledBtn";
 // import ErrorImage from '../../public/error/404.gif'
+
+export const metadata = {
+  title: "404 | Page Not Found",
+  description: "The page you are looking for does not exist.",
+  robots: "noindex, nofollow",
+  alternates: { canonical: "/" },
+};
 
 const Error = () => {
   return (
-    <>
-      <Head>
-        <meta name="description" content="" />
-        <meta name="robots" content="index" />
-        <link rel="canonical" href="/" />
-        <title>404 | Page not found</title>
-      </Head>
+    <> 
       <section>
         <Container maxWidth="xxl" style={{ height: "100vh", width: "100%" }}>
           <Box style={{ height: "100%,", width: "100%", position: "absolute", zIndex: "-1", top: 0, left: 0, right: 0, bottom: 0 }}>

@@ -1,21 +1,20 @@
-import { Box, Container, Grid, Typography } from '@mui/material'
-import Head from 'next/head'
-import { CommonHero, TermsNCondition } from '../../components/components'
-import Banner from '../../../public/LateCancellationPolicy/cancelation1.jpg'
+import { Box, Container, Grid, Typography } from '@mui/material';
+import Banner from '../../../public/LateCancellationPolicy/cancelation1.jpg';
+import { CommonHero, TermsNCondition } from '../../components/components';
+
+export const metadata = {
+  title: "Late Cancellation and Fail to Attend Policy | Carrum Downs Dental ",
+  description: "Late cancellations or Fail to Attend (FTA) often result in wasted time, preparation, and materials.",
+  robots: "index",
+  alternates: { canonical: "/late-cancellation-policy/", },
+};
 
 const LateCancellation = () => {
-   
-
     const breadcrumb = [
         { id: "Late_Cancellation_and_Fail_to_Attend_Policy_1", link: null, title: "Late Cancellation and Fail to Attend Policy" }
     ]
     return (
-        <>
-            <Head>
-                <title>Late Cancellation and Fail to Attend Policy | Carrum Downs Dental </title>
-                <meta name="description" content="Late cancellations or Fail to Attend (FTA) often result in wasted time, preparation, and materials." />
-                <meta name="robots" content="noindex" />      
-            </Head>
+        <> 
             <CommonHero bg={Banner} breadcrumb={breadcrumb} align="left" color="#fff" title="Late Cancellation and Fail to Attend Policy" />
            <main>
                     <section>

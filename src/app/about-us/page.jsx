@@ -1,11 +1,11 @@
-  
+
 
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
+import Banner from "../../../public/CommonHero/about-bg.jpg";
 import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components';
-import Banner from  "../../../public/CommonHero/about-bg.jpg"
+
 // ✅ STATIC SEO (Next.js 16)
 export const metadata = {
   title: "Carrum Downs Family Dental | About Us | Carrum Downs Dentist",
@@ -13,24 +13,20 @@ export const metadata = {
     "Dentists in Carrum Downs Dental Group treat their patients with warm & friendly manner. We provide a treatment plan & cost to our patients before the treatment.",
   robots: "index, follow",
   alternates: {
-    canonical: "https://your-domain.com/about-us",
-  }}
-  
+    canonical: "https://carrumdownsdental.com.au/about-us/",
+  }
+}
+
 const About = () => {
-  
+
   const breadcrumb = [
     { id: "about_page_breadcrumb_1", link: null, title: "About" }
   ]
   return (
     <>
-      <Head>
-        <title>Carrum Downs Family Dental | About Us | Carrum Downs Dentist</title>
-        <meta name="description" content="Dentists in Carrum Downs Dental Group treat their patients with warm & friendly manner. We provide a treatment plan & cost to our patients before the treatment." />
-        <meta name="robots" content="index" />
-      </Head>
       <CommonHero breadcrumb={breadcrumb} color="#fff" align="left" bg={Banner} title="Who we are" />
       {
-      <><main>
+        <><main>
           <Container maxWidth="xxl">
             <Grid container>
               <Grid item xs={12} md={10} className="mx-auto">
@@ -102,7 +98,7 @@ const About = () => {
                       </section>
                       <section className='mt-md-5 mt-4'>
                         <Container maxWidth="xxl">
-                          <Image src="/insurance/insurance.jpg" alt="insurance" width={970} height={340} className='img-fluid'/>
+                          <Image src="/insurance/insurance.jpg" alt="insurance" width={970} height={340} className='img-fluid' />
                           <Typography><strong>Give our friendly reception a call on 03-9782 1200 to book your appointment.</strong></Typography>
                         </Container>
                       </section>
@@ -116,7 +112,7 @@ const About = () => {
             </Grid>
           </Container>
         </main>
-        </>  
+        </>
       }
     </>
   )

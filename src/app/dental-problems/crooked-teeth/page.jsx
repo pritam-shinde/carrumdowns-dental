@@ -1,8 +1,6 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import crookedTeeth_banner from "../../../../public/carrum-new/banner/crooked-tooth.jpg";
 import ClearAligners from "../../../../public/dental-problems-img/crooked teeth/Clear_aligners.png";
 import crookedTeeth1 from '../../../../public/dental-problems-img/crooked teeth/Crooked_Teeth_01.png';
@@ -10,6 +8,14 @@ import crookedTeeth2 from '../../../../public/dental-problems-img/crooked teeth/
 import DentalCrowns from "../../../../public/dental-problems-img/crooked teeth/Dental_crowns_02.png";
 import DentalVeneers from "../../../../public/dental-problems-img/crooked teeth/Dental_veneers.png";
 import SmileMakeovers from "../../../../public/dental-problems-img/crooked teeth/Smile_makeovers.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+  title: "Get Your Crooked Teeth Straightened | Carrum Down Dental",
+  description: "Transform Your Smile with Crooked Teeth Treatment at Carrum Downs Dental. Explore our range of solutions designed to straighten teeth and enhance your oral health.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/crooked-teeth/", },
+};
 
 const CrookedTeeth = () => {
     const breadcrumb = [
@@ -17,12 +23,7 @@ const CrookedTeeth = () => {
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/crooked-teeth", title: 'Crooked Teeth' }
       ] 
     return (
-        <>
-            <Head>
-                <title>Get Your Crooked Teeth Straightened | Carrum Down Dental</title>
-                <meta name="description" content="Transform Your Smile with Crooked Teeth Treatment at Carrum Downs Dental. Explore our range of solutions designed to straighten teeth and enhance your oral health." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={crookedTeeth_banner}
                 breadcrumb={breadcrumb}

@@ -1,8 +1,6 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import StainedBanner from "../../../../public/carrum-new/banner/stained-teeth.jpg";
 import dentalCrowns from "../../../../public/dental-problems-img/stained teeth/Dental_crowns.png";
 import dentalVeeners from "../../../../public/dental-problems-img/stained teeth/Dental_veneers.png";
@@ -10,6 +8,14 @@ import TeethWhitening from "../../../../public/dental-problems-img/stained teeth
 import Smile from "../../../../public/dental-problems-img/stained teeth/Smile_Makeovers_01.png";
 import stainedTeeth1 from '../../../../public/dental-problems-img/stained teeth/Stained_teeth_01.png';
 import stainedTeeth2 from '../../../../public/dental-problems-img/stained teeth/Stained_teeth_02.png';
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+  title: "A Guide to Understanding and Managing Stained Teeth | Carrum Down Dental",
+  description: "For most people, stained teeth are a common occurrence. Our goal at Carrum Downs Dental is to promptly resolve any dental issues you may be facing. Call us right now.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/stained-teeth/", },
+};
 
 const StainedTeeth = () => {
     const breadcrumb = [
@@ -17,12 +23,7 @@ const StainedTeeth = () => {
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/stained-teeth", title: 'Stained Teeth' }
       ] 
     return (
-        <>
-            <Head>
-                <title>A Guide to Understanding and Managing Stained Teeth | Carrum Down Dental</title>
-                <meta name="description" content="For most people, stained teeth are a common occurrence. Our goal at Carrum Downs Dental is to promptly resolve any dental issues you may be facing. Call us right now." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={StainedBanner}
                 breadcrumb={breadcrumb}

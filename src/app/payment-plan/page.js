@@ -1,28 +1,27 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from '../../components/components';
 import Banner from '../../../public/carrum-new/banner/payment-plan.webp';
 import AfterPay from '../../../public/payment-plan/afterpay.png';
 import Denticare from '../../../public/payment-plan/Denticare-badge.jpg';
 import MySmileLogo from '../../../public/payment-plan/mysmileLogo.jpg';
 import MySmile from '../../../public/payment-plan/mysmileplan.png';
+import { BlueFilledBtn, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from '../../components/components';
+
+export const metadata = {
+  title: "Various Payment Plans for Dental Treatment | Carrum Downs Dental",
+  description: "Find the suitable Dental Plans which is completely automated system, convenient & affordable way to pay your dental bills. Call or Visit Carrum Downs Dental Clinic",
+  robots: "index",
+  alternates: { canonical: "/payment-plan/", },
+};
 
 const PaymentPlan = () => {
-
-
   const breadcrumb = [
     { id: "payment_plan_breadcrumb_1", link: null, title: "Payment Plan" }
   ]
 
   return (
-    <>
-      <Head>
-        <title>Various Payment Plans for Dental Treatment | Carrum Downs Dental</title>
-        <meta name="description" content="Find the suitable Dental Plans which is completely automated system, convenient & affordable way to pay your dental bills. Call or Visit Carrum Downs Dental Clinic" />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={breadcrumb} align="left" title="Payment Plans for Your Dental Treatment" color="#fff" />
       <main>
         <section>

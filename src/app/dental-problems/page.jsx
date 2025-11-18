@@ -1,13 +1,13 @@
-import Head from "next/head";
-import Banner from "../../../public/Services/service-bg.jpg";
-import { CommonHero } from "@/components/components"; 
+import { CommonHero } from "@/components/components";
 import DentalProblemsClient from "@/components/dental-problems/DentalProblemsClient";
+import Banner from "../../../public/Services/service-bg.jpg";
 
 export const metadata = {
   title: "Learn About Common Dental Problems | Carrum Downs Dental",
   description:
     "Explore Common Dental Problems and Get Expert Care at Carrum Downs Dental. Discover the causes, symptoms, & treatments for various dental issues to keep a healthy smile.",
   robots: "index",
+  alternates: { canonical: "/contact-us", },
 };
 
 export default function DentalProblemsPage() {
@@ -17,12 +17,6 @@ export default function DentalProblemsPage() {
 
   return (
     <>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="robots" content={metadata.robots} />
-      </Head>
-
       <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Dental Problems" align="left" color="#fff" />
 
       {/* Client component holds interactive logic */}

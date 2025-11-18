@@ -1,27 +1,26 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
-import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from "../../../components/components";
 import Banner from '../../../../public/carrum-new/banner/Invisalign.webp';
 import ClearBiteAligner from "../../../../public/invisalign/Clear-bite-aligners.jpg";
 import ClearBite from "../../../../public/invisalign/Clearbite.jpg";
+import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from "../../../components/components";
 
-const TeethAligner = ({ data }) => {
- 
+export const metadata = {
+    title: "Invisalign Treatment & Dentist Services for Perfect Smiles",
+    description: "Looking for an Invisalign dentist in Carrum Downs? Get expert Invisalign treatment for a straighter, more confident smile with personalized care.",
+    robots: "index",
+    alternates: { canonical: "/service/invisalign", },
+};
 
+const TeethAligner = () => {
   const breadcrumb = [
     { id: "Invisalign_breadcrumb_1", link: "/service/", title: "Service" },
     { id: "Invisalign_breadcrumb_2", link: null, title: "Invisalign" },
   ];
 
   return (
-    <>
-      <Head>
-        <title>Invisalign Treatment & Dentist Services for Perfect Smiles</title>
-        <meta name="description" content="Looking for an Invisalign dentist in Carrum Downs? Get expert Invisalign treatment for a straighter, more confident smile with personalized care." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Invisalign Dentist Services for a Straighter Smile" align ='left' color="#fff" />
      (
         <main>

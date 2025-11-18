@@ -1,24 +1,23 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components';
 import Banner from '../../../public/suburb/bg.jpg';
 import SandhurstClinic from '../../../public/suburb/sandhurst/sandhurst.jpg';
+import { CommonHero, CommonSidebar, SectionalHeading } from '../../components/components';
+
+export const metadata = {
+  title: "Top Dentist in Sandhurst  - Quality Dental Care Services",
+  description: "Skilled & experienced dentists in Sandhurst that provide best quality dental services. Carrum We provides superior dental treatment at an affordable price.",
+  robots: "index",
+  alternates: { canonical: "/dentist-in-sandhurst/", },
+};
 
 const Sandhurst = () => {
-  
-
   const breadcrumb = [
     { id: "suburb_sandhurst_breadcrumb_1", link: null, title: "Dentist In Sandhursts" }
   ]
 
   return (
-    <>
-      <Head>
-        <title>Top Dentist in Sandhurst  - Quality Dental Care Services</title>
-        <meta name="description" content="Skilled & experienced dentists in Sandhurst that provide best quality dental services. Carrum We provides superior dental treatment at an affordable price." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={breadcrumb} align="left" title="Dentist In Sandhursts" color="#fff" />
         <main>
           <Container maxWidth="xxl">

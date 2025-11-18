@@ -2,24 +2,26 @@ import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from "../../../components/components";
 import BannerDrySocket from "../../../../public/carrum-new/banner/dental-abscess2.jpg";
 import drySocket2 from "../../../../public/dental-problems-img/dry socket/Dry_socket_02.png";
 import drySocket1 from "../../../../public/dental-problems-img/dry socket/Dry_socket_03.png";
 import Care from "../../../../public/dental-problems-img/dry socket/Urgent_Dental_Care.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from "../../../components/components";
+
+export const metadata = {
+    title: "Dry Socket: Causes, Symptoms, and Treatment | Carrum Down Dental",
+    description: "A dry socket may develop a few days following tooth extraction. Know more about dry sockets. Contact Carrum Downs Dental for more Dental problems and good oral health.",
+    robots: "index",
+    alternates: { canonical: "/dental-problems/dry-socket/", },
+};
 
 const DrySocket = () => {
     const breadcrumb = [
         { id: "dental_problem_breadcrumb_1", link: "/dental-problems/", title: "Dental Problems" },
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/dry-socket", title: 'Dry Socket' }
-      ] 
+    ]
     return (
         <>
-            <Head>
-                <title>Dry Socket: Causes, Symptoms, and Treatment | Carrum Down Dental</title>
-                <meta name="description" content="A dry socket may develop a few days following tooth extraction. Know more about dry sockets. Contact Carrum Downs Dental for more Dental problems and good oral health." />
-                <meta name="robots" content="index" />
-            </Head>
             <CommonHero bg={BannerDrySocket} breadcrumb={breadcrumb} title="Dry Socket" align="left" color="#fff" />
             <section
                 className="dry-socket-tooth-section1"

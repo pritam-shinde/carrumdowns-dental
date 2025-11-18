@@ -1,10 +1,16 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
-import { CommonHero, CommonSidebar, SectionalHeading } from "../../components/components";
 import Banner from "../../../public/suburb/bg.jpg";
 import PattersonLakeClinic from "../../../public/suburb/patterson-lake/Patterson-Lakes.jpg";
+import { CommonHero, CommonSidebar, SectionalHeading } from "../../components/components";
+
+export const metadata = {
+  title: "Top Rated Dentist in Patterson Lakes | Carrum Downs Dental",
+  description: "Carrum Downs Dentist offers a number of dental services to people of all ages ranging from children to adults near Patterson Lakes. Book an online appointment with us.",
+  robots: "index",
+  alternates: { canonical: "/dentist-in-patterson-lakes/", },
+};
 
 const PattersonLake = () => {
   const breadcrumb = [
@@ -16,15 +22,7 @@ const PattersonLake = () => {
   ];
 
   return (
-    <>
-      <Head>
-        <title>Top Rated Dentist in Patterson Lakes | Carrum Downs Dental</title>
-        <meta
-          name="description"
-          content="Carrum Downs Dentist offers a number of dental services to people of all ages ranging from children to adults near Patterson Lakes. Book an online appointment with us."
-        />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero
         bg={Banner}
         breadcrumb={breadcrumb}

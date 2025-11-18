@@ -1,13 +1,19 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import Bruxism_banner from "../../../../public/carrum-new/banner/bruxism-bg.jpg";
 import bruxiusm1 from '../../../../public/dental-problems-img/bruxism/Bruxism_01.png';
 import bruxiusm2 from '../../../../public/dental-problems-img/bruxism/Bruxism_02.png';
 import bruxiusm3 from "../../../../public/dental-problems-img/bruxism/Bruxism_03.png";
 import DentalCrowns from "../../../../public/dental-problems-img/bruxism/Dental_crowns_03.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+  title: "Get Your Bruxism Treatment | Carrum Down Dental",
+  description: "Get Professional Bruxism Treatment at Carrum Downs Dental. Find out how we can relieve your teeth grinding and clenching while preserving the health of your mouth.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/bruxism/", },
+};
 
 const Bruxism = () => {
     const breadcrumb = [
@@ -15,12 +21,7 @@ const Bruxism = () => {
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/bruxism", title: 'Bruxism' }
       ] 
     return (
-        <>
-            <Head>
-                <title>Get Your Bruxism Treatment | Carrum Down Dental</title>
-                <meta name="description" content="Get Professional Bruxism Treatment at Carrum Downs Dental. Find out how we can relieve your teeth grinding and clenching while preserving the health of your mouth." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={Bruxism_banner}
                 breadcrumb={breadcrumb}

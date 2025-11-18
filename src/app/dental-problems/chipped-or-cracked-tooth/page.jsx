@@ -1,8 +1,6 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import chippedTooth_Banner from "../../../../public/carrum-new/banner/cracked-tooth.jpg";
 import chippedTooth2 from '../../../../public/dental-problems-img/chipped or cracked tooth/bad_breath_04.png';
 import chippedTooth1 from '../../../../public/dental-problems-img/chipped or cracked tooth/Chipped_or_Cracked_Tooth_01.png';
@@ -10,6 +8,14 @@ import DentalCrowns from "../../../../public/dental-problems-img/chipped or crac
 import SmileMakeovers from "../../../../public/dental-problems-img/chipped or cracked tooth/Smile_Makeovers_1.png";
 import ToothExtraction from "../../../../public/dental-problems-img/chipped or cracked tooth/Tooth_Extraction.png";
 import Veneers from "../../../../public/dental-problems-img/chipped or cracked tooth/Veneers_1.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+  title: "Get Solutions for Chipped or Cracked Tooth | Carrum Down Dental",
+  description: "Find Effective Solutions for Chipped or Cracked Teeth at Carrum Downs Dental. Learn about the causes & explore our expert treatments to restore your smile & oral health.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/chipped-or-cracked-tooth/", },
+};
 
 const ChippedTooth = () => {
     const breadcrumb = [
@@ -17,12 +23,7 @@ const ChippedTooth = () => {
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/chipped-or-cracked-tooth", title: 'Chipped or Cracked Teeth' }
       ] 
     return (
-        <>
-            <Head>
-                <title>Get Solutions for Chipped or Cracked Tooth | Carrum Down Dental</title>
-                <meta name="description" content="Find Effective Solutions for Chipped or Cracked Teeth at Carrum Downs Dental. Learn about the causes & explore our expert treatments to restore your smile & oral health." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={chippedTooth_Banner}
                 breadcrumb={breadcrumb}

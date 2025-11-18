@@ -9,11 +9,18 @@ import wisdomTeeth2 from "../../../public/dental-problems-img/wisdom-teeth/Wisdo
 import wisdomTeeth3 from "../../../public/dental-problems-img/wisdom-teeth/Wisdom_teeth_03.png";
 import denture from "../../../public/dental-problems-img/wisdom-teeth/Wisdom_Teeth_Removal.png";
 
+export const metadata = {
+    title: "Handling Wisdom Tooth Pain | Carrum Down Dental",
+    description: "Wisdom Tooth Pain? Let Carrum Downs Dental Treat It Skillfully. Find out how your wisdom teeth are causing you discomfort and how we can help.",
+    robots: "index",
+    alternates: { canonical: "/dental-problems/wisdom-tooth-pain/", },
+};
+
 const WisdomToothPain = () => {
     const breadcrumb = [
         { id: "dental_problem_breadcrumb_1", link: "/dental-problems/", title: "Dental Problems" },
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/wisdom-tooth-pain", title: 'Wisdom Tooth Pain' }
-      ] 
+    ]
     return (
         <>
             <Head>

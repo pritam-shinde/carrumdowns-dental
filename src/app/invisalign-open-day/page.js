@@ -1,23 +1,22 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
-import { CommonHero, InterestFree, SectionalHeading } from "../../components/components";
 import Banner from "../../../public/OpenDay/open-day.jpg";
 import Register from "../../../public/OpenDay/register-interest.jpg";
 import WhyChoose from "../../../public/OpenDay/whyChoose.jpg";
+import { CommonHero, InterestFree, SectionalHeading } from "../../components/components";
+
+export const metadata = {
+  title: "Invisalign Open Day | Carrum Downs Dental",
+  description: "",
+  robots: "index",
+  alternates: { canonical: "/invisalign-open-day/", },
+};
 
 const OpenDay = () => {
-
-
   const breadcrumb = [{ id: "openday_1", link: null, title: "Open day" }];
   return (
     <>
-      <Head>
-        <title> Invisalign Open Day | Carrum Downs Dental</title>
-        <meta name="description" content="" />
-        <meta name="robots" content="index" />
-      </Head>
       <CommonHero
         bg={Banner}
         breadcrumb={breadcrumb}

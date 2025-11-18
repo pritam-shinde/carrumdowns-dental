@@ -1,13 +1,19 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import bleedingGumsBanner from "../../../../public/carrum-new/banner/bleeding-tooth.jpg";
 import bleedingGums1 from '../../../../public/dental-problems-img/bleeding gums/Bleeding_Gums_01.png';
 import bleedingGums2 from '../../../../public/dental-problems-img/bleeding gums/Bleeding_Gums_02.png';
 import GumDisaese from '../../../../public/dental-problems-img/bleeding gums/Gum_disaese_01.png';
 import ScalingNCleaning from '../../../../public/dental-problems-img/bleeding gums/Scaling_and_Cleaning.png';
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+  title: "Causes, Signs, and Treatment of Bleeding Gums | Carrum Downs Dental",
+  description: "Learn about the Causes, Signs, and Effective Treatment for Bleeding Gums with Carrum Downs Dental. Investigate the root causes of this common issue and get expert help.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/bleeding-gums/", },
+};
 
 const WisdomToothPain = () => {
     const breadcrumb = [
@@ -15,12 +21,7 @@ const WisdomToothPain = () => {
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/bleeding-gums", title: 'Bleeding Gums' }
       ] 
     return (
-        <>
-            <Head>
-                <title>Causes, Signs, and Treatment of Bleeding Gums | Carrum Downs Dental</title>
-                <meta name="description" content="Learn about the Causes, Signs, and Effective Treatment for Bleeding Gums with Carrum Downs Dental. Investigate the root causes of this common issue and get expert help." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={bleedingGumsBanner}
                 breadcrumb={breadcrumb}

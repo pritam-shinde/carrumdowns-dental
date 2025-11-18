@@ -1,8 +1,6 @@
 import { CheckCircleOutline } from '@mui/icons-material';
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
-import Head from 'next/head';
 import Image from 'next/image';
-import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 import dentalAbscess4 from "../../../../public/carrum-new/banner/dental-abscess.jpg";
 import dentalAbscess1 from '../../../../public/dental-problems-img/dental abscess/Dental_Abscess_01.png';
 import dentalAbscess2 from '../../../../public/dental-problems-img/dental abscess/Dental_Abscess_02.png';
@@ -10,6 +8,14 @@ import dentalcare from "../../../../public/dental-problems-img/dental abscess/de
 import rootcanel from "../../../../public/dental-problems-img/dental abscess/rootcanel.png";
 import ToothRemoval from "../../../../public/dental-problems-img/dental abscess/ToothRemoval.png";
 import wisdomteethcare from "../../../../public/dental-problems-img/dental abscess/wisdomteethcare.png";
+import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
+
+export const metadata = {
+  title: "Dental Abscess In Carrum Downs | Carrum Downs Dental",
+  description: "A dental abscess is an illness of the teeth that is brought on by an infected pus pocket. For further information, go to Carrum Downs Dental.",
+  robots: "index",
+  alternates: { canonical: "/dental-problems/dental-abscess/", },
+};
 
 const DentalAbscess = () => {
     const breadcrumb = [
@@ -17,12 +23,7 @@ const DentalAbscess = () => {
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/dental-abscess", title: 'Dental Abscess' }
       ] 
     return (
-        <>
-            <Head>
-                <title>Dental Abscess In Carrum Downs | Carrum Downs Dental</title>
-                <meta name="description" content="A dental abscess is an illness of the teeth that is brought on by an infected pus pocket. For further information, go to Carrum Downs Dental." />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero
                 bg={dentalAbscess4}
                 breadcrumb={breadcrumb}

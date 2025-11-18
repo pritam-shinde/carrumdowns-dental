@@ -1,23 +1,21 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import Head from "next/head";
 import Image from "next/image";
-import { BlueFilledBtn, CommonHero, CommonSidebar, SectionalHeading } from "../../components/components";
 import Banner from "../../../public/suburb/bg.jpg";
 import LangwarrinClinic from "../../../public/suburb/Langwarrin/langwarin.jpg";
+import { BlueFilledBtn, CommonHero, CommonSidebar, SectionalHeading } from "../../components/components";
+
+export const metadata = {
+  title: "Trusted and Experienced Dentist in Lyndhurst | Dental Services",
+  description: "We offer a number of dental services to people of all ages ranging from children to adults. Schedule an online appointment with Carrum Downs Dental Group.",
+  robots: "index",
+  alternates: { canonical: "/dentist-in-langwarrin/", },
+};
 
 const Langwarrin = () => {
     const breadcrumb = [{ id: "langwarrin_breadcrumb_1", link: null, title: "Dentist In Langwarrin" }];
 
     return (
-        <>
-            <Head>
-                <title>Trusted and Experienced Dentist in Lyndhurst | Dental Services</title>
-                <meta
-                    name="description"
-                    content="We offer a number of dental services to people of all ages ranging from children to adults. Schedule an online appointment with Carrum Downs Dental Group."
-                />
-                <meta name="robots" content="index" />
-            </Head>
+        <> 
             <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Dentist In Langwarrin" align="left" color="#fff" />
                 <main>
                     <Container maxWidth="xxl">

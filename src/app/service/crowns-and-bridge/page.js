@@ -1,11 +1,17 @@
 import { CheckCircleOutline } from '@mui/icons-material'
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
-import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
-import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from '../../../components/components'
 import Banner from '../../../../public/carrum-new/banner/crown-briedge.jpg'
 import CNBTeeth from '../../../../public/CNB/defective-large-old-fillings.jpg'
+import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from '../../../components/components'
+
+export const metadata = {
+  title: "Expert Dental Bridge & Crown Services for a Perfect Smile",
+  description: "Restore your smile with expert dental bridge and crown dentistry services in Carrum Downs. Get high-quality crowns and bridges for a perfect, lasting smile.",
+  robots: "index",
+  alternates: { canonical: "/service/crowns-and-bridge", },
+};
 
 const CNB = () => {
   const breadcrumb = [
@@ -14,12 +20,7 @@ const CNB = () => {
   ]
 
   return (
-    <>
-      <Head>
-        <title>Expert Dental Bridge & Crown Services for a Perfect Smile</title>
-        <meta name="description" content="Restore your smile with expert dental bridge and crown dentistry services in Carrum Downs. Get high-quality crowns and bridges for a perfect, lasting smile." />
-        <meta name="robots" content="index" />
-      </Head>
+    <> 
       <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Dental Crowns and Bridges: Long-Lasting Solutions for Teeth" color="#fff" />
       <>
         <main>
