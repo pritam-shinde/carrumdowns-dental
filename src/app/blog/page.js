@@ -1,15 +1,27 @@
-import { BlogSidebar, CommonHero, CustomCard } from "@/components/components";
+import { BlogSidebar, BlueFilledBtn, CommonHero, CustomCard } from "@/components/components";
 import Banner from "../../../public/carrum-new/banner/blog.jpg";
-import { Box, Card, CardContent, Container, Grid, Skeleton, Stack } from "@mui/material";
 
-// ----------------------------
-// 🔥 SERVER FETCH FUNCTIONS
-// ----------------------------
+import { Box, Card, CardContent, Container, Grid, Skeleton, Stack, } from "@mui/material";
+
+// ⭐ Metadata (Next.js 16 format) 
+// ⭐ Metadata (Next.js 16 format) 
+export const metadata = {
+  title: "Blog | Carrum Downs Dental Group | Dentist Carrum Downs",
+  description:
+    "Our blog contains various posts related to the dental conditions, treatments and vouchers. Read our blogs for dental tips and be aware of the dental problems.",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://carrumdownsdental.com.au/about-us/",
+  },
+};
+
+// 🔥 SERVER FETCH FUNCTIONS 
 async function fetchBlogs() {
   const res = await fetch(
-    "https://apicarrumdownsdental.myconcept.website/wp-json/wp/v2/posts?_embed=true",
+    `https://apicarrumdownsdental.myconcept.website/wp-json/wp/v2/posts?_embed=true&page=1&per_page=6`,
     { cache: "no-store" }
   );
+  if (!res.ok) return [];
   return res.json();
 }
 
@@ -21,9 +33,7 @@ async function fetchCategories() {
   return res.json();
 }
 
-// ----------------------------
-// ⭐ Skeletons for server fallback
-// ----------------------------
+// ⭐ Skeletons 
 function BlogCardSkeleton() {
   return (
     <Card className="shadow grow">
@@ -53,10 +63,8 @@ function SidebarSkeleton() {
   );
 }
 
-// ----------------------------------------------------------
-// 🔥 MAIN SERVER COMPONENT
-// ----------------------------------------------------------
-export default async function BlogPage() {
+
+export default async function Page() {
   const blogs = await fetchBlogs();
   const categories = await fetchCategories();
 
@@ -64,16 +72,6 @@ export default async function BlogPage() {
 
   return (
     <>
-      {/* META TAGS */}
-      <head>
-        <title>Blog | Carrum Downs Dental Group | Dentist Carrum Downs</title>
-        <meta
-          name="description"
-          content="Our blog contains various posts related to dental conditions, treatments, vouchers. Read our blogs for dental tips."
-        />
-        <meta name="robots" content="noindex,follow" />
-      </head>
-
       {/* HERO SECTION */}
       <CommonHero breadcrumb={breadcrumb} title="Blog" bg={Banner} />
 
@@ -82,61 +80,57 @@ export default async function BlogPage() {
           <Container maxWidth="xxl">
             <Grid container>
               <Grid item xs={12} md={10} className="mx-auto">
-                <Box py={5}>
+                <Box pt={5} pb={12}>
                   <Grid container spacing={5}>
-                    
                     {/* LEFT COLUMN */}
                     <Grid item xs={12} lg={8}>
-                      {/* 🟦 PURE CSS Responsive Masonry Layout */}
                       <div
                         style={{
                           display: "grid",
-                          gridTemplateColumns:
-                            "repeat(2, minmax(300px, 1fr))",
+                          gridTemplateColumns: "repeat(2, minmax(300px, 1fr))",
                           gap: "20px",
                         }}
                       >
                         {blogs?.length === 0
-                          ? Array.from({ length: 6 }).map((_, i) => (
-                              <BlogCardSkeleton key={i} />
-                            ))
+                          ? (
+                            <Box sx={{ gridColumn: "1 / -1", textAlign: "center", py: 5 }}>
+                              <h3>No posts found.</h3>
+                            </Box>
+                          )
                           : blogs?.map((item) => (
-                              <CustomCard
-                                key={item.id}
-                                cardMedia={
-                                  item?._embedded?.["wp:featuredmedia"]?.[0]
-                                    ?.source_url || null
-                                }
-                                navlink={true}
-                                link={`/${item.slug}/`}
-                                cardTitle={item.title.rendered}
-                                cardPara={`${item.excerpt.rendered
-                                  .replace(/<[^>]*>?/gm, "")
-                                  .split(" ")
-                                  .slice(0, 20)
-                                  .join(" ")} [...]`}
-                                cardHeight="auto"
-                                cardCls="shadow grow"
-                                List={null}
-                                cardMediaAlt={
-                                  item?._embedded?.["wp:featuredmedia"]?.[0]
-                                    ?.alt_text || null
-                                }
-                              />
-                            ))}
+                            <CustomCard
+                              key={item.id}
+                              cardMedia={
+                                item?._embedded?.["wp:featuredmedia"]?.[0]
+                                  ?.source_url || null
+                              }
+                              navlink={true}
+                              link={`/${item.slug}/`}
+                              cardTitle={item.title.rendered}
+                              cardPara={`${item.excerpt.rendered
+                                .replace(/<[^>]*>?/gm, "")
+                                .split(" ")
+                                .slice(0, 20)
+                                .join(" ")} [...]`}
+                              cardHeight="auto"
+                              cardCls="shadow grow"
+                              List={null}
+                              cardMediaAlt={
+                                item?._embedded?.["wp:featuredmedia"]?.[0]
+                                  ?.alt_text || null
+                              }
+                            />
+                          ))}
                       </div>
-
-                      {/* NEXT BUTTON */}
-                      <Box
-                        pt={3}
-                        className="d-flex justify-content-center align-items-center"
-                      >
-                        <a
-                          href="/blog/page/2/"
-                          className="px-4 py-2 bg-blue-600 text-white rounded"
-                        >
-                          NEXT
-                        </a>
+                      <Box pt={3} className="d-flex justify-content-center align-items-center gap-3">
+                        {/* Only NEXT button on the first page */}
+                        {blogs?.length === 6 && (
+                          <BlueFilledBtn
+                            btnLink={`/blog/page/2/`}
+                            btnTitle="NEXT"
+                            navlink={true}
+                          />
+                        )}
                       </Box>
                     </Grid>
 
@@ -145,7 +139,10 @@ export default async function BlogPage() {
                       {blogs?.length === 0 ? (
                         <SidebarSkeleton />
                       ) : (
-                        <BlogSidebar blogs={blogs.slice(0, 5)} cat={categories} />
+                        <BlogSidebar
+                          blogs={blogs.slice(0, 5)}
+                          cat={categories}
+                        />
                       )}
                     </Grid>
                   </Grid>
@@ -187,8 +184,8 @@ export default async function BlogPage() {
 //     );
 //     return await res.json();
 // }
- 
-// // ⭐ Skeleton Components 
+
+// // ⭐ Skeleton Components
 // function BlogCardSkeleton() {
 //     return (
 //         <Card className="shadow grow m-3">
@@ -217,15 +214,15 @@ export default async function BlogPage() {
 //         </Stack>
 //     );
 // }
- 
-// // 🔥 MAIN COMPONENT 
+
+// // 🔥 MAIN COMPONENT
 // export default function Blog() {
 //     const [blogs, setBlogs] = useState([]);
 //     const [category, setCategory] = useState([]);
 //     const [show, setShow] = useState(false);
 //     const [loading, setLoading] = useState(true);
- 
-//     // 🔥 Load Data on Mount 
+
+//     // 🔥 Load Data on Mount
 //     useEffect(() => {
 //         setShow(true);
 
@@ -334,113 +331,3 @@ export default async function BlogPage() {
 //         </>
 //     );
 // }
-
-// import Head from "next/head";
-// import { useEffect, useState } from "react";
-// import { XBlock, XMasonry } from "react-xmasonry";
-// import { BlogSidebar, BlueFilledBtn, CommonHero, CustomCard } from "../../components/components";
-// import { Box, Container, Grid } from "@mui/material";
-// import Banner from "../../public/carrum-new/banner/blog.jpg";
-
-// export const getServerSideProps = async () => {
-//     const res = await fetch("https://apicarrumdownsdental.myconcept.website/wp-json/wp/v2/posts?_embed=true");
-//     const catRes = await fetch("https://apicarrumdownsdental.myconcept.website/wp-json/wp/v2/categories?_embed=true&per_page=99");
-//     const data = await res.json();
-//     const category = await catRes.json();
-//     return {
-//         props: {
-//             data,
-//             category,
-//         },
-//     };
-// };
-
-// const Blog = ({ data, category }) => {
-//     const [show, setShow] = useState(false);
-
-//     useEffect(() => {
-//         if (typeof window !== undefined) {
-//             setShow(true);
-//         } else {
-//             setShow(false);
-//         }
-//     }, []);
-
-//     const breadcrumb = [{ id: "blog_page_index", link: null, title: "Blog" }];
-
-//     return (
-//         <>
-//             <Head>
-//                 <title>Blog | Carrum Downs Dental Group | Dentist Carrum Downs</title>
-//                 <meta name="description" content="Our blog contains various posts related to the dental conditions, treatments and vouchers. Read our blogs for dental tips and be aware of the dental problems." />
-//                 <meta name="robots" content="noindex,follow" /> 
-//             </Head>
-//             <CommonHero breadcrumb={breadcrumb} title="Blog" bg={Banner} />
-//             {show ? (
-//                 <main>
-//                     <section>
-//                         <Container maxWidth="xxl">
-//                             <Grid container>
-//                                 <Grid item xs={12} md={10} className="mx-auto">
-//                                     <Box py={5}>
-//                                         <Grid container spacing={5}>
-//                                             <Grid item xs={12} lg={8} >
-//                                                 <XMasonry maxColumns={2} responsive targetBlockWidth={400}>
-//                                                     {data
-//                                                         ? data.map((item) => (
-//                                                               <XBlock key={item.id}>
-//                                                                   <CustomCard
-//                                                                       cardMedia={
-//                                                                           item._embedded
-//                                                                               ? item._embedded["wp:featuredmedia"]
-//                                                                                   ? item._embedded["wp:featuredmedia"][0]
-//                                                                                       ? item._embedded["wp:featuredmedia"][0].source_url
-//                                                                                       : null
-//                                                                                   : null
-//                                                                               : null
-//                                                                       }
-//                                                                       navlink={true}
-//                                                                       link={`/${item.slug}/`}
-//                                                                       cardTitle={item.title.rendered}
-//                                                                       cardPara={`${item.excerpt.rendered.split(" ").slice(0, 20).join(" ")} [...]`}
-//                                                                       cardHeight="auto"
-//                                                                       cardCls="shadow grow m-3"
-//                                                                       List={null}
-//                                                                       cardMediaAlt={
-//                                                                           item
-//                                                                               ? item._embedded
-//                                                                                   ? item._embedded["wp:featuredmedia"]
-//                                                                                       ? item._embedded["wp:featuredmedia"][0]
-//                                                                                           ? item._embedded["wp:featuredmedia"][0].alt_text
-//                                                                                               ? item._embedded["wp:featuredmedia"][0].alt_text
-//                                                                                               : null
-//                                                                                           : null
-//                                                                                       : null
-//                                                                                   : null
-//                                                                               : null
-//                                                                       }
-//                                                                   />
-//                                                               </XBlock>
-//                                                           ))
-//                                                         : null}
-//                                                 </XMasonry>
-//                                                 <Box pt={3} className="d-flex justify-content-center align-items-center">
-//                                                     <BlueFilledBtn btnLink={`/blog/page/2/`} btnTitle="NEXT" navlink={true} />
-//                                                 </Box>
-//                                             </Grid>
-//                                             <Grid item xs={12} lg={4}>
-//                                                 <BlogSidebar blogs={data.slice(0, 5)} cat={category} />
-//                                             </Grid>
-//                                         </Grid>
-//                                     </Box>
-//                                 </Grid>
-//                             </Grid>
-//                         </Container>
-//                     </section>
-//                 </main>
-//             ) : null}
-//         </>
-//     );
-// };
-
-// export default Blog;

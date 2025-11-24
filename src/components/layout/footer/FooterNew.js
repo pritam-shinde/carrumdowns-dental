@@ -13,6 +13,8 @@ const FooterNew = () => {
                     backgroundSize: "100% 100%",
                     backgroundPosition: "top center",
                     backgroundRepeat: "no-repeat",
+                    position: "relative",
+                    zIndex: 10,
                 }}
             >
                 <Container maxWidth="xxl" id="service">

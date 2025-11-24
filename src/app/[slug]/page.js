@@ -1,3 +1,4 @@
+
 import { Box, Container, Grid } from "@mui/material";
 import Image from "next/image";
 import CommonHero from "@/components/CommonHero/CommonHero";
@@ -6,15 +7,53 @@ import Banner1 from "../../../public/CommonHero/single-blog-1.jpg";
 import Banner2 from "../../../public/CommonHero/blog-3-0.jpg";
 import Banner4 from "../../../public/CommonHero/blog-index-2.jpg";
 
-// ------------------------
+
+
 // API Fetch Helper
-// ------------------------
 async function fetchAPI(endpoint) {
   const base = "https://apicarrumdownsdental.myconcept.website";
   const res = await fetch(`${base}${endpoint}`, { next: { revalidate: 300 } });
 
   if (!res.ok) return null;
   return res.json();
+}
+
+// ----------------------------
+// ⭐ GENERATE METADATA (SEO)
+// ----------------------------
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const posts = await fetchAPI(`/wp-json/wp/v2/posts?slug=${slug}&_embed=true`);
+
+  if (!posts || !posts[0]) {
+    return {
+      title: "Blog Not Found | Carrum Downs Dental Group",
+    };
+  }
+
+  const blog = posts[0];
+  const yoast = blog.yoast_head_json || {};
+
+  return {
+    title: yoast.title || blog.title.rendered,
+    description: yoast.description || blog.excerpt.rendered.replace(/<[^>]*>?/gm, ""),
+    alternates: {
+      canonical: `https://carrumdownsdental.com.au/${slug}/`,
+    },
+    openGraph: {
+      title: yoast.og_title || blog.title.rendered,
+      description: yoast.og_description || yoast.description,
+      images: yoast.og_image ? [{ url: yoast.og_image[0].url }] : [],
+      url: `https://carrumdownsdental.com.au/${slug}/`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: yoast.twitter_title || yoast.og_title || blog.title.rendered,
+      description: yoast.twitter_description || yoast.og_description || yoast.description,
+      images: yoast.twitter_image ? [yoast.twitter_image] : (yoast.og_image ? [yoast.og_image[0].url] : []),
+    },
+  };
 }
 
 // ----------------------------
@@ -66,7 +105,7 @@ export default async function SingleBlogPage({ params }) {
         <Container maxWidth="xxl">
           <Grid container>
             <Grid item xs={12} md={10} className="mx-auto">
-              <Box py={5}>
+              <Box pt={5} pb={12}>
                 <Grid container spacing={5}>
                   {/* LEFT CONTENT */}
                   <Grid item xs={12} lg={8}>

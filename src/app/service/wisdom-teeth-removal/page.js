@@ -1,38 +1,18 @@
-"use client"
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Button, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import Head from "next/head";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { Autoplay, Navigation, Pagination } from "swiper";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from "../../../components/components";
-import Banner from "../../../../public/carrum-new/banner/wisdom-teeth-removal.webp";
-import Slider1 from "../../../../public/WisdomTeeth/Slider1.jpg";
-import Slider2 from "../../../../public/WisdomTeeth/Slider2.jpg";
-import Slider3 from "../../../../public/WisdomTeeth/Slider3.jpg";
-import Slider4 from "../../../../public/WisdomTeeth/Slider4.jpg";
 import Script from "next/script";
+import { BookAndCall, CommonHero, CommonSidebar, InterestFree, SectionalHeading, TermsNCondition } from "../../../components/components";
+import WisdomSwiper from "../../../components/other/WisdomSwiper";
+import Banner from "../../../../public/carrum-new/banner/wisdom-teeth-removal.webp";
 
-const WisdomTeeth = () => {
-  const [hydration, setHydration] = useState(false);
-  const [width, setWidth] = useState();
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      setHydration(true);
-    } else {
-      setHydration(false);
-    }
-  }, []);
+export const metadata = {
+  title: "Affordable Wisdom Teeth Removal & Oral Surgery Services",
+  description:
+    "Our dentist specializes in the removal of wisdom teeth with expert oral surgery. We offer affordable wisdom teeth removal solutions for a comfortable experience.",
+  robots: "index",
+};
 
-  useEffect(() => {
-    setWidth(window.innerWidth);
-  }, [width]);
-
+export default function WisdomTeeth() {
   const breadcrumb = [
     { id: "WisdomTeeth_breadcrumb_1", link: "/service/", title: "Service" },
     {
@@ -44,23 +24,13 @@ const WisdomTeeth = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Affordable Wisdom Teeth Removal & Oral Surgery Services
-        </title>
-        <meta
-          name="description"
-          content="Our dentist specializes in the removal of wisdom teeth with expert oral surgery. We offer affordable wisdom teeth removal solutions for a comfortable experience."
-        />
-        <meta name="robots" content="index" />
-      </Head>
       <CommonHero bg={Banner} breadcrumb={breadcrumb} title="Expert Dentist for Wisdom Teeth Removal and Oral Surgery" align="left" color="#fff" />
       <>
         <main>
           <Container maxWidth="xxl">
             <Grid container>
               <Grid item xs={12} md={10} className="mx-auto">
-                <Box py={5}>
+                <Box pt={5} pb={12}>
                   <Grid container spacing={3}>
                     <Grid item xs={12} lg={8}>
                       <section>
@@ -98,21 +68,7 @@ const WisdomTeeth = () => {
                             />
                           ))}
                           <Box my={3}>
-                            <Swiper spaceBetween={30} effect={"fade"} navigation={true} pagination={{ clickable: true }}
-                              className="slide-text mySwiper" modules={[Navigation, Pagination, Autoplay]} loop={true} slidesPerView={1}
-                              autoplay={{ delay: 5000, disableOnInteraction: false }}
-                            >
-                              {[
-                                { id: "wisdom-tooth-x-ray", image: Slider1 },
-                                { id: "wisdom-tooth-x-ray2", image: Slider2 },
-                                { id: "new-wisdom-tooth-x-ray", image: Slider3 },
-                                { id: "wisdom-tooth-improper-positioning", image: Slider4 },
-                              ].map((item) => (
-                                <SwiperSlide key={item.id}>
-                                  <Image src={item.image} alt={item.id} width={1500} height={586} priority />
-                                </SwiperSlide>
-                              ))}
-                            </Swiper>
+                            <WisdomSwiper />
                           </Box>
                         </Container>
                         {/* Asynchronous script for Wistia */}
@@ -377,4 +333,3 @@ const WisdomTeeth = () => {
     </>
   );
 };
-export default WisdomTeeth;
