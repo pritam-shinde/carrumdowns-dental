@@ -3,11 +3,11 @@ import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typog
 import Head from "next/head";
 import Image from "next/image";
 import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from "../../../components/components";
-import BannerWisdom from "../../../public/carrum-new/banner/wisdom-teeth-pain.jpg";
-import wisdomTeeth1 from "../../../public/dental-problems-img/wisdom-teeth/Wisdom_teeth_01.png";
-import wisdomTeeth2 from "../../../public/dental-problems-img/wisdom-teeth/Wisdom_teeth_02.png";
-import wisdomTeeth3 from "../../../public/dental-problems-img/wisdom-teeth/Wisdom_teeth_03.png";
-import denture from "../../../public/dental-problems-img/wisdom-teeth/Wisdom_Teeth_Removal.png";
+import BannerWisdom from "../../../../public/carrum-new/banner/wisdom-teeth-pain.jpg";
+import wisdomTeeth1 from "../../../../public/dental-problems-img/wisdom-teeth/Wisdom_teeth_01.png";
+import wisdomTeeth2 from "../../../../public/dental-problems-img/wisdom-teeth/Wisdom_teeth_02.png";
+import wisdomTeeth3 from "../../../../public/dental-problems-img/wisdom-teeth/Wisdom_teeth_03.png";
+import denture from "../../../../public/dental-problems-img/wisdom-teeth/Wisdom_Teeth_Removal.png";
 
 export const metadata = {
     title: "Handling Wisdom Tooth Pain | Carrum Down Dental",
@@ -74,7 +74,7 @@ const WisdomToothPain = () => {
                 <Container>
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6} className="d-flex justify-content-center">
-                            <Image src={wisdomTeeth2} alt="Image" />
+                            <Image src={wisdomTeeth2} alt="Image" className="img-fluid" />
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Box sx={{ p: 1 }}>

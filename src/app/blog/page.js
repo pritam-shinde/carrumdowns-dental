@@ -4,7 +4,6 @@ import Banner from "../../../public/carrum-new/banner/blog.jpg";
 import { Box, Card, CardContent, Container, Grid, Skeleton, Stack, } from "@mui/material";
 
 // ⭐ Metadata (Next.js 16 format) 
-// ⭐ Metadata (Next.js 16 format) 
 export const metadata = {
   title: "Blog | Carrum Downs Dental Group | Dentist Carrum Downs",
   description:
@@ -81,16 +80,13 @@ export default async function Page() {
             <Grid container>
               <Grid item xs={12} md={10} className="mx-auto">
                 <Box pt={5} pb={12}>
-                  <Grid container spacing={5}>
+                  <Grid container spacing={3}>
                     {/* LEFT COLUMN */}
                     <Grid item xs={12} lg={8}>
-                      <div
-                        style={{
-                          display: "grid",
-                          gridTemplateColumns: "repeat(2, minmax(300px, 1fr))",
-                          gap: "20px",
-                        }}
-                      >
+                      <div style={{
+                        display: "grid", gridTemplateColumns: "repeat(2, minmax(280px, 1fr))",
+                        gap: "60px",
+                      }}>
                         {blogs?.length === 0
                           ? (
                             <Box sx={{ gridColumn: "1 / -1", textAlign: "center", py: 5 }}>

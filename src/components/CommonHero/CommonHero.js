@@ -113,7 +113,7 @@ const CommonHero = ({ pathName, title, breadcrumb, bg, desc }) => {
           {slides.map((slide, i) => (
             <SwiperSlide
               key={i}
-              style={{ position: "relative", width: "100%", height: "100vh" }}
+              style={{ position: "relative", width: "100%", height: "100%" }}
             >
               <Image
                 src={isMobile ? slide.mobile : slide.desktop}

@@ -106,14 +106,14 @@ export default async function CategoryPage({ params }) {
                         <Grid container>
                             <Grid item xs={12} md={10} className="mx-auto">
                                 <Box pt={5} pb={12}>
-                                    <Grid container spacing={5}>
+                                    <Grid container spacing={3}>
                                         {/* LEFT COLUMN */}
                                         <Grid item xs={12} lg={8}>
                                             <div
                                                 style={{
                                                     display: "grid",
-                                                    gridTemplateColumns: "repeat(2, minmax(300px, 1fr))",
-                                                    gap: "20px",
+                                                    gridTemplateColumns: "repeat(2, minmax(280px, 1fr))",
+                                                    gap: "60px",
                                                 }}
                                             >
                                                 {!category ? (

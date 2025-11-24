@@ -6,8 +6,8 @@ import { Box, Card, CardContent, Container, Grid, Skeleton, Stack } from "@mui/m
 export async function generateMetadata({ params }) {
     const { pageNo } = await params;
     return {
-        title: `Blog - Page ${pageNo} | Carrum Downs Dental Group`,
-        description: `Read our blogs for dental tips - Page ${pageNo}`,
+        title: `Blog | Carrum Downs Dental Group | Dentist Carrum Downs ${pageNo}`,
+        description: `Our blog contains various posts related to the dental conditions, treatments and vouchers. Read our blogs for dental tips and be aware of the dental problems ${pageNo}.`,
         robots: "noindex, follow", // Usually paginated pages are set to noindex or canonical to root
         alternates: {
             canonical: `https://carrumdownsdental.com.au/blog/page/${pageNo}/`,

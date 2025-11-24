@@ -51,7 +51,7 @@ const SevereToothache = () => {
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6} className='d-flex justify-content-center'>
-                            <Image src={severeTootache1} alt="Image" width={450} height={400} />
+                            <Image src={severeTootache1} alt="Image" width={450} height={400} className='img-fluid' />
                         </Grid>
                     </Grid>
                 </Container>
@@ -61,7 +61,7 @@ const SevereToothache = () => {
                 <Container>
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6} className='d-flex justify-content-center'>
-                            <Image src={severeTootache2} alt="Image" />
+                            <Image src={severeTootache2} alt="Image" className='img-fluid' />
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Box sx={{ p: 1 }}>

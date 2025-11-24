@@ -11,19 +11,19 @@ import Veneers from "../../../../public/dental-problems-img/chipped or cracked t
 import { BlueFilledBtn, BlueOulinedBtn, CommonHero, SectionalHeading } from '../../../components/components';
 
 export const metadata = {
-  title: "Get Solutions for Chipped or Cracked Tooth | Carrum Down Dental",
-  description: "Find Effective Solutions for Chipped or Cracked Teeth at Carrum Downs Dental. Learn about the causes & explore our expert treatments to restore your smile & oral health.",
-  robots: "index",
-  alternates: { canonical: "/dental-problems/chipped-or-cracked-tooth/", },
+    title: "Get Solutions for Chipped or Cracked Tooth | Carrum Down Dental",
+    description: "Find Effective Solutions for Chipped or Cracked Teeth at Carrum Downs Dental. Learn about the causes & explore our expert treatments to restore your smile & oral health.",
+    robots: "index",
+    alternates: { canonical: "/dental-problems/chipped-or-cracked-tooth/", },
 };
 
 const ChippedTooth = () => {
     const breadcrumb = [
         { id: "dental_problem_breadcrumb_1", link: "/dental-problems/", title: "Dental Problems" },
         { id: "dental_problem_breadcrumb_2", link: "/dental-problems/chipped-or-cracked-tooth", title: 'Chipped or Cracked Teeth' }
-      ] 
+    ]
     return (
-        <> 
+        <>
             <CommonHero
                 bg={chippedTooth_Banner}
                 breadcrumb={breadcrumb}
@@ -63,7 +63,7 @@ const ChippedTooth = () => {
                 <Container>
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6} className='d-flex justify-content-center'>
-                            <Image src={chippedTooth2} alt="Image" />
+                            <Image src={chippedTooth2} alt="Image" className='img-fluid' />
                         </Grid>
                         <Grid item xs={12} md={6}>
                             <Box sx={{ p: 1 }}>
