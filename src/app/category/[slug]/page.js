@@ -1,4 +1,11 @@
 import { BlogSidebar, BlueFilledBtn, CommonHero, CustomCard } from "@/components/components";
+import {
+    fetchWordPressJson,
+    getWordPressExcerpt,
+    getWordPressFeaturedAlt,
+    getWordPressFeaturedImage,
+    getWordPressTitle,
+} from "@/lib/wordpress";
 import Banner from "../../../../public/carrum-new/banner/blog.jpg";
 import { Box, Card, CardContent, Container, Grid, Skeleton, Stack } from "@mui/material";
 
@@ -25,29 +32,25 @@ export async function generateMetadata({ params }) {
 
 // 🔥 SERVER FETCH FUNCTIONS
 async function fetchCategory(slug) {
-    const res = await fetch(
-        `https://apicarrumdownsdental.myconcept.website/wp-json/wp/v2/categories?slug=${slug}`,
-        { cache: "no-store" }
+    const data = await fetchWordPressJson(
+        `/wp-json/wp/v2/categories?slug=${slug}`,
+        { cache: "no-store", fallback: [] }
     );
-    const data = await res.json();
     return data[0] || null;
 }
 
 async function fetchPostsByCategory(categoryId) {
-    const res = await fetch(
-        `https://apicarrumdownsdental.myconcept.website/wp-json/wp/v2/posts?_embed=true&categories=${categoryId}&per_page=10`, // Fetching 10 for now, or could match blog's 6
-        { cache: "no-store" }
+    return fetchWordPressJson(
+        `/wp-json/wp/v2/posts?categories=${categoryId}&per_page=10&_embed=true`,
+        { cache: "no-store", fallback: [] }
     );
-    if (!res.ok) return [];
-    return res.json();
 }
 
 async function fetchCategories() {
-    const res = await fetch(
-        "https://apicarrumdownsdental.myconcept.website/wp-json/wp/v2/categories?_embed=true&per_page=99",
-        { cache: "no-store" }
+    return fetchWordPressJson(
+        "/wp-json/wp/v2/categories?_embed=true&per_page=99",
+        { cache: "no-store", fallback: [] }
     );
-    return res.json();
 }
 
 // ⭐ Skeletons
@@ -128,14 +131,11 @@ export default async function CategoryPage({ params }) {
                                                     posts.map((item) => (
                                                         <CustomCard
                                                             key={item.id}
-                                                            cardMedia={
-                                                                item?._embedded?.["wp:featuredmedia"]?.[0]
-                                                                    ?.source_url || null
-                                                            }
+                                                            cardMedia={getWordPressFeaturedImage(item)}
                                                             navlink={true}
                                                             link={`/${item.slug}/`}
-                                                            cardTitle={item.title.rendered}
-                                                            cardPara={`${item.excerpt.rendered
+                                                            cardTitle={getWordPressTitle(item)}
+                                                            cardPara={`${getWordPressExcerpt(item)
                                                                 .replace(/<[^>]*>?/gm, "")
                                                                 .split(" ")
                                                                 .slice(0, 20)
@@ -143,10 +143,7 @@ export default async function CategoryPage({ params }) {
                                                             cardHeight="auto"
                                                             cardCls="shadow grow"
                                                             List={null}
-                                                            cardMediaAlt={
-                                                                item?._embedded?.["wp:featuredmedia"]?.[0]
-                                                                    ?.alt_text || null
-                                                            }
+                                                            cardMediaAlt={getWordPressFeaturedAlt(item)}
                                                         />
                                                     ))
                                                 )}

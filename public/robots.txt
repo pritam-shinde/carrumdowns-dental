@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /wp-admin/
-Disallow: */?*
 Disallow: /wp-includes/sodium_compat/
 Disallow: /how-does-stem-cell-dental-implant-help-to-regrow-your-teeth/
 

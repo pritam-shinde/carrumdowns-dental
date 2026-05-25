@@ -63,6 +63,7 @@ const navbarMenu = [
       { label: "Denture Technology", href: "/service/denture-technology/" },
       { label: "Sleep Dentistry", href: "/service/sleep-dentistry/" },
       { label: "Teeth Aligners", href: "/service/teeth-aligners/" },
+      { label: "All-on-X", href: "/service/all-on-x/" },
     ],
   },
   {

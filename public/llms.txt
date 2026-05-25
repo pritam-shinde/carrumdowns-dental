@@ -1,0 +1,117 @@
+# llms for Carrumdownsdental.com.au
+
+## Owner  
+Owner: Carrum Downs Dental Group  
+Contact: (03) 9782 1200 | carrumdownsdental@gmail.com 
+Website: https://carrumdownsdental.com.au  
+
+## Carrum Downs Dental Group Overview  
+> Carrum Downs Dental Group is a **full-service family dental clinic** located in Carrum Downs, Victoria, offering general dentistry, cosmetic treatments, implants, children’s care and emergency dental services. They emphasise personalized care, advanced technology, and a comfortable, friendly environment for patients of all ages. :contentReference[oaicite:1]{index=1}
+
+## Key Features  
+- **Comprehensive Dental Services**: Routine exams, hygiene, fillings, crowns, bridges, root canals, and more.  
+- **Specialist Treatments & Implants**: Dental implants, implant-supported dentures, cosmetic veneers, teeth-whitening options.  
+- **Children’s & Family Dentistry**: Services tailored to kids, including Child Dental Benefit Scheme support. 
+- **7-Day Availability & Emergency Care**: Open on weekends and provide emergency dental appointments. 
+- **Flexible Payment Options**: Accepts health funds, offers payment plans, Afterpay and industry-preferred providers. 
+- **Modern Technology & Patient Comfort**: Uses up-to-date dental equipment and aims for a relaxed patient experience. 
+
+## Essential Pages  
+- [Home](https://carrumdownsdental.com.au/) – Overview of the clinic, services offered, mission and patient promise.  
+- [About Us](https://carrumdownsdental.com.au/about-us/) – Clinic history, team introduction, values and why patients choose them.  
+- [Patient Referral Program](Details about how patients can refer friends or family and receive special benefits.)
+- [Payment Plan](Information on flexible, interest-free payment options for affordable dental treatments.)
+- [New Technologies](Overview of the latest dental technologies used for accurate and comfortable treatments.)
+- [Offer](Current promotions, discounts, and special dental offers available at the clinic.)
+- [Meet Our Team](Introduction to the clinic’s dentists and staff, including their experience and roles.)
+- [Access My Super](Guidance on using superannuation funds to pay for eligible dental treatments.)
+- [Services](https://carrumdownsdental.com.au/services/) – Full listing of dental services: missing teeth solutions, wisdom teeth removal, implants, cleaning, whitening etc. 
+- [Missing Teeth](https://carrumdownsdental.com.au/service/missing-teeth/) -
+- [Wisdom Teeth Removal](https://carrumdownsdental.com.au/service/wisdom-teeth-removal/) - Safe removal of problematic or impacted wisdom teeth with minimal discomfort.
+- [Child Benefit](https://carrumdownsdental.com.au/service/child-benefit/) - Dental care for eligible children under the Child Dental Benefits Scheme.
+- [Dental Implants](https://carrumdownsdental.com.au/service/dental-implants/) - Permanent replacement for missing teeth with natural function and appearance.
+- [Denture] (https://carrumdownsdental.com.au/service/dentures/) – Custom-made full and partial dentures designed for comfort and durability.
+- [Teeth Whitening] (https://carrumdownsdental.com.au/service/teeth-whitening/) – Professional whitening treatments to brighten and enhance your smile.
+- [Crown And Bridges] (https://carrumdownsdental.com.au/service/crowns-and-bridge/) – Restorative solutions to repair damaged teeth and replace missing ones.
+- [Veneers](https://carrumdownsdental.com.au/service/veneers/) – Cosmetic veneers to improve tooth shape, size, and colour.
+- [Invisalign](https://carrumdownsdental.com.au/service/invisalign/) – Popular clear aligner orthodontic system for predictable results.
+- [Invisalign Open Day](https://carrumdownsdental.com.au/service/invisalign-open-day/) – Special Invisalign consultation event with treatment information.
+- [Root Canal](https://carrumdownsdental.com.au/service/root-canal/) – Treatment to save infected teeth and stop pain.
+- [Teeth Cleaning](https://carrumdownsdental.com.au/service/teeth-cleaning/) – Professional dental cleaning to maintain healthy teeth and gums.
+- [Dental Emergency](https://carrumdownsdental.com.au/service/dental-emergency/) – Immediate care for urgent dental problems and severe pain.
+- [Tooth Filling](https://carrumdownsdental.com.au/service/tooth-fillings/) – Long-lasting fillings to restore teeth damaged by cavities.
+- [Teeth Aligners](https://carrumdownsdental.com.au/service/teeth-aligners/) – Clear aligner treatment to straighten teeth discreetly.
+- [Digital Dentures](https://carrumdownsdental.com.au/service/digital-dentures/) – Modern digitally designed dentures for precision fit and comfort.
+- [Implant Supported Denture](https://carrumdownsdental.com.au/service/implant-supported-denture/) – Dentures secured with implants for superior stability.
+- [Missing Teeth](https://carrumdownsdental.com.au/service/missing-teeth/) – Multiple options for replacing one or more missing teeth.
+- [Sleep Dentistry](https://carrumdownsdental.com.au/service/sleep-dentistry/) – Sedation options for anxiety-free and comfortable dental treatment.
+- [Sports Mouth Guard](https://carrumdownsdental.com.au/service/sports-mouth-guard/) – Custom-fit mouthguards for sports and high-impact activities.
+
+- [Dental Problems](https://carrumdownsdental.com.au/dental-problems/) – Overview of common dental concerns such as bad breath, gum disease, knocked-out teeth, and more.
+- [Bad Breath](https://carrumdownsdental.com.au/dental-problems/bad-breath/) – Causes and treatments for persistent bad breath (halitosis).
+- [Bite Problems](https://carrumdownsdental.com.au/dental-problems/bite-problems/) – Details on improper bite alignment issues and how they can be corrected.
+- [Bleeding Gums](https://carrumdownsdental.com.au/dental-problems/bleeding-gums/) – Explanation of bleeding gums, early gum disease signs, and treatment methods.
+- [Bruxism](https://carrumdownsdental.com.au/dental-problems/bruxism/) – Causes and symptoms of teeth grinding along with recommended treatment solutions.
+- [Chipped Or Cracked Tooth](https://carrumdownsdental.com.au/dental-problems/chipped-or-cracked-tooth/) – Repair options for cracked or broken teeth.
+- [Crooked Teeth](https://carrumdownsdental.com.au/dental-problems/crooked-teeth/) – Causes of crooked teeth and treatment options to straighten them.
+- [Dental Abscess](https://carrumdownsdental.com.au/dental-problems/dental-abscess/) – Infection signs and urgent treatment recommendations.
+- [Dry Socket](https://carrumdownsdental.com.au/dental-problems/dry-socket/) – Post-extraction complication information and pain relief options.
+- [Gum Disease](https://carrumdownsdental.com.au/dental-problems/gum-disease/) – Stages of gum disease and how to prevent or treat it.
+- [Knocked Out Teeth](https://carrumdownsdental.com.au/dental-problems/knocked-out-tooth/) – Emergency steps for a lost tooth and restoration options.
+- [Severe Toothache](https://carrumdownsdental.com.au/dental-problems/severe-toothache/) – Causes of intense tooth pain and treatments available.
+- [Stained Teeth](https://carrumdownsdental.com.au/dental-problems/stained-teeth/) – Causes of tooth staining and whitening solutions.
+- [Teeth Sensitivity](https://carrumdownsdental.com.au/dental-problems/teeth-sensitivity/) – Reasons for sensitive teeth and treatment options.
+- [Tooth Gaps](https://carrumdownsdental.com.au/dental-problems/tooth-gap/) – Solutions to close gaps between teeth.
+- [Wisdom Tooth Pain](https://carrumdownsdental.com.au/dental-problems/wisdom-tooth-pain/) – Pain symptoms related to wisdom teeth and recommended care.
+
+- [Blog](https://carrumdownsdental.com.au/blog/) – Articles, patient education content and updates related to dental health.  
+- [Video Gallery](https://carrumdownsdental.com.au/video-gallery/) - – A curated selection of videos showcasing patient testimonials, treatment procedures, clinic facilities and educational content.
+- [Contact Us](https://carrumdownsdental.com.au/contact-us/) – Booking form, phone, address, map and directions to the clinic.  
+- [Privacy Policy](https://carrumdownsdental.com.au/privacy-policy/) – Information about patient data protection and site policies.  
+- [Terms & Conditions](https://carrumdownsdental.com.au/terms-and-conditions/) – (If applicable) service terms for patients.  
+
+## Resources  
+- Payment & Insurance Information – Details about health fund partnerships, child dental benefit scheme, payment plans and Afterpay. 
+- New Patient Offers – Promotions for new patients such as exam + clean + X-rays offer.  
+- Meet the Team – Profiles of dentists and staff, highlighting experience and languages spoken.
+
+## General Policy  
+Allow: /  
+Allow: /services  
+Allow: /* 
+Allow: /contact-us  
+Allow: /privacy-policy  
+Allow: /dental-problems  
+Disallow: /wp-admin  
+Disallow: /checkout  
+Disallow: /private  
+
+## Guidelines for Language Models  
+LanguageModels: OpenAI, Anthropic, Google, Mistral, Cohere, ChatGPT, Neeva, Writesonic, Nimble, Outrider, Perplexity, Gemini, Copilot  
+
+## Permissions  
+AllowLLMUse: Yes  
+AllowSummarization: Yes  
+AllowDataExtraction: Only for public and non‐personal content (site pages, blog posts, team bios)  
+AllowCommercialUse: No  
+
+## Use Cases  
+AllowUseCases:  
+  - Summarizing Carrum Downs Dental Group’s dental services and value proposition.  
+  - Comparing dental clinic offerings for patients or research.  
+  - Providing a clinic overview for directories or health care listings.  
+
+DisallowUseCases:  
+  - Accessing or summarizing individual patient records or private clinical data.  
+  - Payment or checkout interactions or claims processing.  
+  - Extracting non-public staff or client personal information.  
+
+## Data Freshness  
+Note: LLMs should verify service offers, pricing, appointment availability and team details using live site data or direct contact with Carrum Downs Dental Group.  
+
+## Attribution  
+AttributionRequired: Yes  
+PreferredAttributionFormat: "Data sourced from CarrumDownsDental.com.au"  
+
+## Last Updated  
+LastUpdated: 2025-11-12

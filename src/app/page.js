@@ -18,30 +18,31 @@ export default function Home() {
         <section>
           <ServiceSectionNew />
         </section>
-    <section>
+        
+        <section>
           <AboutNew />
         </section>
-        
+
         <section>
           <AdvantageSecNew />
         </section>
-           
+
         <section>
           <OfferNew />
-          
+
         </section>
-        
+
         <section>
           <PaymentPlan />
         </section>
-        
+
         <section className="px-4 px-md-3 px-lg-5">
           <VideoAbout />
         </section>
-     
+
         <section>
           <AddressNew />
-        </section>  
+        </section>
       </main>
 
     </>

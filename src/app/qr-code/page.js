@@ -1,10 +1,9 @@
 import EmailIcon from '@mui/icons-material/Email'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import PhoneIcon from '@mui/icons-material/Phone'
 import { Avatar, Box, Container, Divider, Grid, Paper, Stack, Typography } from '@mui/material'
 import Head from 'next/head'
-import QrGenerator from '../../components/other/QrGenerator'
 import Link from 'next/link'
+import QrGenerator from '../../components/other/QrGenerator'
 
 const QrCode = () => {
     return (

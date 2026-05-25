@@ -1,8 +1,8 @@
 import { CheckCircleOutline } from "@mui/icons-material";
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, } from "@mui/material";
 import Head from "next/head";
-import { CommonHero, SectionalHeading } from "../../components/components";
 import Banner from "../../../public/carrum-new/banner/terms-and-condition.jpg";
+import { CommonHero, SectionalHeading } from "../../components/components";
 
 const TermsNConditions = () => {
 

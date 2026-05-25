@@ -2,9 +2,9 @@ import { CheckCircleOutline } from '@mui/icons-material'
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
-import { BookAndCall, InterestFree, PPCBanner, SectionalHeading, TermsNCondition } from '../../components/components'
 import Banner from '../../../public/ppcscalenclaen/Banner.jpg'
 import Image1 from '../../../public/ppcscalenclaen/cleaning.jpg'
+import { BookAndCall, InterestFree, PPCBanner, SectionalHeading, TermsNCondition } from '../../components/components'
 import { PaymentPlan } from '../../sections/sections'
 
 const ScaleNClean = () => {

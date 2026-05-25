@@ -1,12 +1,11 @@
-import React from 'react'
+import { CheckCircleOutline } from '@mui/icons-material'
+import { Box, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
+import { Container } from '@mui/system'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Container } from '@mui/system'
-import { Box, Grid, Typography, List, ListItem, ListItemIcon, ListItemText } from '@mui/material'
-import { CheckCircleOutline } from '@mui/icons-material'
-import image1 from '../../../public/ppctoothfilings/tooth-fillings-1.webp'
 import Banner from '../../../public/ppctoothfilings/Banner.jpg'
-import { SectionalHeading, BookAndCall, TermsNCondition, InterestFree, PPCBanner } from '../../components/components'
+import image1 from '../../../public/ppctoothfilings/tooth-fillings-1.webp'
+import { BookAndCall, InterestFree, PPCBanner, SectionalHeading, TermsNCondition } from '../../components/components'
 import { PaymentPlan } from '../../sections/sections'
 
 const ToothFillings = () => {

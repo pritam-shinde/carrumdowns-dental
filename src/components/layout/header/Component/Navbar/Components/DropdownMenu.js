@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from 'react';
 
 const DropdownMenu = ({ menu, closeMobileMenu }) => {
@@ -43,7 +41,8 @@ const DropdownMenu = ({ menu, closeMobileMenu }) => {
                     { id: "service-menu-15", title: "DIGITAL DENTURES", path: "/service/digital-dentures/", submenu: null },
                     { id: "service-menu-16", title: "IMPLANT SUPPORTED DENTURE", path: "/service/implant-supported-denture/", submenu: null },
                     { id: "service-menu-17", title: "SLEEP DENTISTRY", path: "/service/sleep-dentistry/", submenu: null },
-                    { id: "service-menu-18", title: "TEETH ALIGNERS", path: "/service/teeth-aligners/", submenu: null }].map(item => <li className="nav-item mb-2" key={item.id} onClick={() => { setClick(false); closeMobileMenu() }}>
+                    { id: "service-menu-18", title: "TEETH ALIGNERS", path: "/service/teeth-aligners/", submenu: null },
+                    { id: "service-menu-19", title: "ALL-ON-X", path: "/service/all-on-x/", submenu: null }].map(item => <li className="nav-item mb-2" key={item.id} onClick={() => { setClick(false); closeMobileMenu() }}>
                         <a href={item.path} className='nav-link text-dark'>{item.title}</a>
                         {
                             item.submenu !== null ? <ul className='ps-3 ms-3' style={{ borderLeft: "1px solid #555" }}>

@@ -3,6 +3,14 @@ import { Box, Container, Grid } from "@mui/material";
 import Image from "next/image";
 import CommonHero from "@/components/CommonHero/CommonHero";
 import BlogSidebar from "@/components/BlogSidebar/BlogSidebar";
+import {
+  fetchWordPressJson,
+  getWordPressContent,
+  getWordPressExcerpt,
+  getWordPressFeaturedAlt,
+  getWordPressFeaturedImage,
+  getWordPressTitle,
+} from "@/lib/wordpress";
 import Banner1 from "../../../public/CommonHero/single-blog-1.jpg";
 import Banner2 from "../../../public/CommonHero/blog-3-0.jpg";
 import Banner4 from "../../../public/CommonHero/blog-index-2.jpg";
@@ -11,11 +19,10 @@ import Banner4 from "../../../public/CommonHero/blog-index-2.jpg";
 
 // API Fetch Helper
 async function fetchAPI(endpoint) {
-  const base = "https://apicarrumdownsdental.myconcept.website";
-  const res = await fetch(`${base}${endpoint}`, { next: { revalidate: 300 } });
-
-  if (!res.ok) return null;
-  return res.json();
+  return fetchWordPressJson(endpoint, {
+    next: { revalidate: 300 },
+    fallback: null,
+  });
 }
 
 // ----------------------------
@@ -33,25 +40,28 @@ export async function generateMetadata({ params }) {
 
   const blog = posts[0];
   const yoast = blog.yoast_head_json || {};
+  const title = getWordPressTitle(blog);
+  const excerpt = getWordPressExcerpt(blog).replace(/<[^>]*>?/gm, "");
+  const featuredImage = getWordPressFeaturedImage(blog);
 
   return {
-    title: yoast.title || blog.title.rendered,
-    description: yoast.description || blog.excerpt.rendered.replace(/<[^>]*>?/gm, ""),
+    title: yoast.title || title,
+    description: yoast.description || excerpt,
     alternates: {
       canonical: `https://carrumdownsdental.com.au/${slug}/`,
     },
     openGraph: {
-      title: yoast.og_title || blog.title.rendered,
+      title: yoast.og_title || title,
       description: yoast.og_description || yoast.description,
-      images: yoast.og_image ? [{ url: yoast.og_image[0].url }] : [],
+      images: yoast.og_image ? [{ url: yoast.og_image[0].url }] : (featuredImage ? [{ url: featuredImage }] : []),
       url: `https://carrumdownsdental.com.au/${slug}/`,
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: yoast.twitter_title || yoast.og_title || blog.title.rendered,
+      title: yoast.twitter_title || yoast.og_title || title,
       description: yoast.twitter_description || yoast.og_description || yoast.description,
-      images: yoast.twitter_image ? [yoast.twitter_image] : (yoast.og_image ? [yoast.og_image[0].url] : []),
+      images: yoast.twitter_image ? [yoast.twitter_image] : (yoast.og_image ? [yoast.og_image[0].url] : (featuredImage ? [featuredImage] : [])),
     },
   };
 }
@@ -76,10 +86,10 @@ export default async function SingleBlogPage({ params }) {
   const blog = blogArr[0];
 
   const featuredImage =
-    blog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
+    getWordPressFeaturedImage(blog);
 
   const featuredAlt =
-    blog?._embedded?.["wp:featuredmedia"]?.[0]?.alt_text || "Blog image";
+    getWordPressFeaturedAlt(blog);
 
   // Random hero banner
   const banners = [Banner1, Banner2, Banner4];
@@ -93,11 +103,11 @@ export default async function SingleBlogPage({ params }) {
           {
             id: "b2",
             link: null,
-            title: blog?.title?.rendered || "",
+            title: getWordPressTitle(blog),
           },
         ]}
         bg={banner}
-        title={blog?.title?.rendered || ""}
+        title={getWordPressTitle(blog)}
         color="#fff"
       />
 
@@ -124,7 +134,7 @@ export default async function SingleBlogPage({ params }) {
                     <Box
                       mt={3}
                       dangerouslySetInnerHTML={{
-                        __html: blog?.content?.rendered || "",
+                        __html: getWordPressContent(blog),
                       }}
                     />
                   </Grid>

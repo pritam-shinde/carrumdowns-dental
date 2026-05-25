@@ -2,11 +2,11 @@ import { CheckCircleOutline } from '@mui/icons-material'
 import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import Head from 'next/head'
 import Image from 'next/image'
-import { BookAndCall, InterestFree, PPCBanner, SectionalHeading, TermsNCondition } from '../../components/components'
 import image4 from '../../../public/ppcteeth-whitening/poladay.jpg'
 import image5 from '../../../public/ppcteeth-whitening/polanight.jpg'
 import image1 from '../../../public/ppcteeth-whitening/teeth-whitening-1.jpg'
 import Banner from '../../../public/TeethWhitening/Banner.jpg'
+import { BookAndCall, InterestFree, PPCBanner, SectionalHeading, TermsNCondition } from '../../components/components'
 import { PaymentPlan } from '../../sections/sections'
 
 const TeethWhitening = () => {
