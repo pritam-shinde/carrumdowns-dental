@@ -78,6 +78,8 @@ export default async function SingleBlogPage({ params }) {
     fetchAPI(`/wp-json/wp/v2/categories?per_page=20&_fields=id,name,slug`),
     fetchAPI(`/wp-json/wp/v2/posts?per_page=5&_fields=id,slug,title,excerpt`),
   ]);
+  const safeCategories = Array.isArray(categories) ? categories : [];
+  const safeRecentBlogs = Array.isArray(recentBlogs) ? recentBlogs : [];
 
   if (!blogArr || !blogArr[0]) {
     return <h1 style={{ padding: "50px" }}>404 — Blog Not Found</h1>;
@@ -141,7 +143,7 @@ export default async function SingleBlogPage({ params }) {
 
                   {/* SIDEBAR */}
                   <Grid item xs={12} lg={4}>
-                    <BlogSidebar blogs={recentBlogs} cat={categories} />
+                    <BlogSidebar blogs={safeRecentBlogs} cat={safeCategories} />
                   </Grid>
                 </Grid>
               </Box>

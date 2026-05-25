@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "babel-plugin-react-compiler": "^1.0.0",
-    "eslint": "8.22.0",
-    "eslint-config-next": "^0.2.4"
+    "eslint": "^9.38.0",
+    "eslint-config-next": "16.0.10"
   }
 }
