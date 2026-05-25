@@ -128,7 +128,7 @@ export default async function SingleBlogPage({ params }) {
                         alt={featuredAlt}
                         width={800}
                         height={500}
-                        className="w-100"
+                        className="w-100 object-fit-cover"
                       />
                     )}
 
