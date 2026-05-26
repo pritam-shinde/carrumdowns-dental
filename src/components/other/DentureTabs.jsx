@@ -26,21 +26,6 @@ const DentureTabs = () => {
     const [value, setValue] = useState(0);
 
     const handleChange = (e, newValue) => setValue(newValue);
-
-    // Helper to switch tab programmatically (used in "Learn More" buttons if they were to switch tabs, 
-    // but the original code had buttons that linked to other pages OR switched tabs. 
-    // The original code had `onClick={() => setSelectedTab("...")}` but `setSelectedTab` wasn't defined in the snippet I saw?
-    // Wait, looking at the original code: `const [value, setValue] = useState(0);`
-    // But in the buttons: `onClick={() => setSelectedTab("Denture (Traditional)")}`
-    // `setSelectedTab` is NOT defined in the provided file content of DentureTechnologyClient.jsx!
-    // It seems the original code might have had a bug or I missed something. 
-    // Ah, I see `const [value, setValue] = useState(0);` but no `selectedTab` state.
-    // The buttons also have `href` in the `a` tag. So they navigate away. 
-    // The `onClick` seems to try to set some state but it looks broken in the original or I should ignore it.
-    // I will keep the `a` tags for navigation and remove the broken `onClick` or fix it if it was meant to switch tabs.
-    // Actually, the buttons say "Learn More" and link to `/service/dentures/` etc. So navigation is the primary action.
-    // I will remove the `onClick` handlers that reference undefined `setSelectedTab`.
-
     return (
         <section className="mt-md-5 mt-4">
             <Container maxWidth="xxl">

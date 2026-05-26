@@ -35,7 +35,7 @@ const facilityImages = {
 };
 
 const sleepDentistryVideoUrl = "/sleep-denstistry/ga-surgery-video.mp4";
- 
+
 const sleepDentistryVideoThumbnail = "/sleep-denstistry/ga-surgery.jpeg";
 
 const leftPoints = [
@@ -339,7 +339,6 @@ const SleepDentistryNew = () => {
                       background:
                         "linear-gradient(135deg, #1e5f8a 0%, #2d7fb0 100%)",
                       color: "#fff",
-                      // height: "100%",
                       boxShadow: "0 18px 42px rgba(11, 45, 74, 0.20)",
                     }}
                   >
@@ -380,7 +379,7 @@ const SleepDentistryNew = () => {
                             flex: "0 0 auto",
                             mt: "2px",
                           }}
-                        > 
+                        >
                           {item.icon}
                         </Box>
 
@@ -649,10 +648,10 @@ const SleepDentistryNew = () => {
                   fontSize: { xs: 32, sm: 38, md: 44 },
                 }}
               >
-                A Purpose-Built{" "}
+                A Purpose-Built
                 <Box component="span" sx={{ color: "#19beb9" }}>
                   Sleep Dentistry
-                </Box>{" "}
+                </Box>
                 Facility
               </Typography>
               <Typography className="para" sx={{ mb: 4 }}>
@@ -986,10 +985,10 @@ const SleepDentistryNew = () => {
                             <Box
                               sx={{
                                 width: 22,
-                                height: 22, 
+                                height: 22,
                                 color: "#19beb9",
                                 display: "grid",
-                                placeItems: "center", 
+                                placeItems: "center",
                               }}
                             >
                               {/* ✓ */}
@@ -1024,7 +1023,7 @@ const SleepDentistryNew = () => {
                 <Grid item xs={12} md={5}>
                   <Paper
                     elevation={0}
-                    sx={{ 
+                    sx={{
                       borderRadius: "16px",
                       background:
                         "linear-gradient(135deg, #0f3553 0%, #115278 100%)",
@@ -1053,7 +1052,7 @@ const SleepDentistryNew = () => {
                             display: "flex",
                             gap: 1.5,
                             alignItems: "flex-start",
-                            py: 1, 
+                            py: 1,
                           }}
                         >
                           <Box
@@ -1100,10 +1099,10 @@ const SleepDentistryNew = () => {
                     color: "#19beb9",
                     fontWeight: 700,
                   }}
-                /> 
+                />
                 <SectionalHeading variant="h2" color="var(--dark-blue)" title="Common Questions" align="center" />
               </Box>
-              <Box mt={3}> 
+              <Box mt={3}>
                 <div className="accordion" id="accordionExample">
                   <div className="accordion-item">
                     <h3 className="accordion-header" id="headingOne">
@@ -1297,7 +1296,7 @@ const SleepDentistryNew = () => {
                           <Typography
                             sx={{
                               mt: 1,
-                              fontWeight: 800, 
+                              fontWeight: 800,
                             }}
                           >
                             <a href={c.href} className="text-white">

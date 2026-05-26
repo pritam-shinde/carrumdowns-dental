@@ -1,4 +1,4 @@
-import { BlogSidebar, BlueFilledBtn, CommonHero, CustomCard } from "@/components/components";
+import { BlogSidebar, CommonHero, CustomCard } from "@/components/components";
 import {
     fetchWordPressJson,
     getWordPressExcerpt,
@@ -6,8 +6,8 @@ import {
     getWordPressFeaturedImage,
     getWordPressTitle,
 } from "@/lib/wordpress";
-import Banner from "../../../../public/carrum-new/banner/blog.jpg";
 import { Box, Card, CardContent, Container, Grid, Skeleton, Stack } from "@mui/material";
+import Banner from "../../../../public/carrum-new/banner/blog.jpg";
 
 // ⭐ Metadata
 export async function generateMetadata({ params }) {
@@ -148,7 +148,6 @@ export default async function CategoryPage({ params }) {
                                                     ))
                                                 )}
                                             </div>
-                                            {/* Pagination for categories could be added here later if needed */}
                                         </Grid>
 
                                         {/* RIGHT SIDEBAR */}
@@ -157,14 +156,7 @@ export default async function CategoryPage({ params }) {
                                                 <SidebarSkeleton />
                                             ) : (
                                                 <BlogSidebar
-                                                    blogs={posts.slice(0, 5)} // Show recent posts from this category or global? Usually global, but here using posts. Let's stick to posts for now or fetch global recent.
-                                                    // Actually BlogSidebar usually shows recent posts. 
-                                                    // If I pass `posts`, it shows recent posts from this category. 
-                                                    // If I want global recent posts, I should fetch them separately.
-                                                    // For now, passing `posts` is acceptable as "Recent in this category" or just reuse what we have.
-                                                    // Wait, the sidebar in blog/page.js uses `blogs.slice(0, 5)` which are the latest blogs.
-                                                    // Here `posts` are filtered by category. It might be better to fetch latest global blogs for the sidebar to be consistent.
-                                                    // But let's keep it simple for now and use `posts`. 
+                                                    blogs={posts.slice(0, 5)}
                                                     cat={categories}
                                                 />
                                             )}

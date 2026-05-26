@@ -102,7 +102,7 @@ const TeethWhiteningClient = () => {
                                 height={265}
                                 style={{ objectFit: "cover" }}
                               />
-                              <CardContent className="cardContentTW" style={{ position: "relative", display:"flex", flexDirection:"column" }}>
+                              <CardContent className="cardContentTW" style={{ position: "relative", display: "flex", flexDirection: "column" }}>
                                 <Typography variant="h3" className="fs-4" color="var(--dark-blue)">
                                   Zoom Teeth Whitening
                                 </Typography>
@@ -163,7 +163,7 @@ const TeethWhiteningClient = () => {
                                 height={265}
                                 style={{ objectFit: "cover" }}
                               />
-                              <CardContent className="cardContentTW" sx={{display:"flex", flexDirection:"column"}}>
+                              <CardContent className="cardContentTW" sx={{ display: "flex", flexDirection: "column" }}>
                                 <Typography
                                   variant="h3"
                                   className="fs-4"
@@ -557,7 +557,7 @@ const TeethWhiteningClient = () => {
                                         offer affordable services and never
                                         sacrifice quality. The results will also
                                         be long-lasting. Call us today to
-                                        schedule an appointment.{" "}
+                                        schedule an appointment.
                                       </Typography>
                                     </Box>
                                   </Box>
